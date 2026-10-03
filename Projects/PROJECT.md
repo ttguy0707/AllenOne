@@ -40,7 +40,10 @@
 
 ## 当前进度
 
-- 2026-10-03：已初始化 Git，完成 README、暂存区隐私检查并推送到 `https://github.com/ttguy0707/AllenOne.git` 的 `main` 分支。首次实现提交为 `ed4b961`；使用 GitHub noreply 提交身份，8 项核心测试与构建通过。Cloudflare 站点仍待创建与连接。
+- 2026-10-03 外部部署已修复：按用户授权操作 Edge 中的 Cloudflare，Worker `allen-one` 已发布 `dist/`，地址为 `https://allen-one.ttguy0707.workers.dev`。构建 `e0fad1eb` 成功，版本 `9d437efb-e10f-4625-afad-e9ef6a03c02c`。线上首页 200、85 项资源清单有效，Service Worker 缓存为 `wildfit-shell-2146ccf9a760`；独立 Edge 环境验证 86 条缓存、断网刷新成功、无页面脚本错误。尚未真机验收。
+- 部署遗留问题：创建流程将原仓库复制到 `ttguy0707/allen-one`，Cloudflare 当前关联该复制仓库，本地 origin 仍是 `ttguy0707/AllenOne`；未擅自切换或删除仓库。本地推送不会触发现有站点更新，需后续统一关联。初始误发布 `app/` 已修复，构建／部署命令及重试说明见根 README。
+
+- 2026-10-03：已初始化 Git，完成 README、暂存区隐私检查并推送到 `https://github.com/ttguy0707/AllenOne.git` 的 `main` 分支。首次实现提交为 `ed4b961`；使用 GitHub noreply 提交身份，8 项核心测试与构建通过。当前 Cloudflare 部署状态见上文。
 
 - AllenOne 品牌改为生图制作的标准大写 A、平面四色几何拼接，取消立体感并精修字形比例。其他 UI 图标按最新要求保持单色，用户允许素材网站来源；已接入 18 个 Google 官方 Material Symbols，本地 PNG 支持浅深主题与离线。规范与预览见 `ICON_SYSTEM.md`；具体美术待评审。
 
@@ -59,4 +62,4 @@
 
 ## 下一步
 
-用户体验新预渲染动画；马／鳐待素材服务可用后补齐，继续评审逐帧流畅度与实际录入流程；后续确定 HTTPS 托管并进行 iPhone 真机安装、触控和性能验证。
+统一 Cloudflare 与本地代码仓库关联，并进行 iPhone 真机安装、离线、更新与记录流程验证。马／鳐素材及角色美术继续待评审。

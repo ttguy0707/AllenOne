@@ -32,7 +32,24 @@ Windows PowerShell 若限制执行 npm 脚本，可将 `npm` 写作 `npm.cmd`。
 
 正式应用使用原生 JavaScript、IndexedDB、Canvas 2D、Manifest 和 Service Worker，无需后端或运行时 CDN。旧 Three.js 模型与原型仅作为历史保留，不进入正式构建。
 
-## Cloudflare Pages 部署
+## 当前 Cloudflare Workers 配置
+
+现有 Worker 名称为 `allen-one`，地址为 [AllenOne](https://allen-one.ttguy0707.workers.dev)。在 **Settings → Builds** 中使用：
+
+| 设置 | 值 |
+| --- | --- |
+| 构建命令 | `npm run build` |
+| 部署命令 | `npx wrangler deploy --name allen-one --assets ./dist --compatibility-date 2026-10-01` |
+| 根目录 | `/` |
+| 生产分支 | `main` |
+
+2026-10-03 核对发现，创建流程复制了仓库，当前构建关联 `ttguy0707/allen-one`；本地 origin 仍为用户指定的 `ttguy0707/AllenOne`。两者尚未统一，推送本地 origin 不会触发现有 Worker 更新。后续需明确统一仓库关联，避免在两个仓库分别维护代码。
+
+修改构建设置后，在 **Deployments → Go to build history → 最新普通构建 → Retry build** 重试。初始模板构建可能因 `seed_repo override` 无法重试；本次通过临时 Deploy Hook 创建普通构建，使用后删除入口。不要将 Hook URL 或 API Token 写入仓库。
+
+参考：[Workers 构建配置](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/)、[Deploy Hooks](https://developers.cloudflare.com/workers/ci-cd/builds/deploy-hooks/)。
+
+## Cloudflare Pages 部署（另选方案）
 
 将代码推送至 GitHub，在 Cloudflare 选择 **Workers & Pages → 创建应用 → Pages → 连接 Git**，选择本仓库。
 
@@ -55,7 +72,7 @@ Windows PowerShell 若限制执行 npm 脚本，可将 `npm` 写作 `npm.cmd`。
 
 1. 修改源码并在本地构建、验证。
 2. 检查暂存内容，提交并推送至 `main`。
-3. 已连接的 Cloudflare Pages 自动构建并发布到原生产地址。
+3. 只有推送到 Cloudflare 实际关联的仓库／分支，才会触发自动构建并发布到原生产地址；当前 Workers 仓库关联差异见上文。
 4. 手机联网打开以下载新版本；当前没有“发现新版本”提示，可能需要关闭 AllenOne 和同站点 Safari 页面，再重新打开。
 
 构建根据资源内容生成新离线缓存版本。正常资源更新不清空 IndexedDB；若变更数据结构，需要另行实现迁移。请勿用清除网站数据作为日常更新方式。

@@ -1,6 +1,6 @@
 # 主应用实施状态
 
-更新：2026-10-02。用户已授权完成 20 多种差异姿态设计后开始开发。当前是可运行开发版，未对外部署、未完成 iPhone 真机验收。
+更新：2026-10-03。开发版已部署到 Cloudflare Workers，发布目录已修正为 dist/，线上清单与离线缓存通过独立 Edge 检查；当前 Cloudflare 与本地仓库关联不同，状态与待处理项见 PROJECT.md。尚未完成 iPhone 真机验收。
 
 最新 UI：已更名 AllenOne 并采用 Google Material 风格，详见 `MATERIAL_UI.md`；新样式入口 `app/material.css`，原数据库键与备份格式保留兼容。
 
@@ -54,7 +54,7 @@
 ## 仍需后续处理
 
 - 真机 iPhone Safari 安装、触控、后台恢复、性能／耗电及长期本地存储验证；桌面手机宽度模拟不能代替真机。
-- HTTPS 托管选择与部署。当前仅电脑本机地址，手机不能直接安装访问。
+- HTTPS 已部署至 `https://allen-one.ttguy0707.workers.dev`；Cloudflare 当前关联复制仓库 `ttguy0707/allen-one`，与本地 origin 不同，需统一后才可通过本地推送自动更新。
 - 用户评审新角色形态、轻量逐帧动作与成长参数；补齐马／鳐的动画素材。当前不是连续视频或五套独立进化形态。
 - 自定义动作图片上传、设备同步、苹果健康集成不在本轮范围。
 - 若后续更换 Schema／成长版本，先提供迁移与备份兼容验证。
@@ -63,3 +63,7 @@
 ## 图标更新（2026-10-03）
 
 品牌接入生图标准 A 平面几何字标；导航、运动和操作图标统一为 18 个单色官方 Material Symbols，本地 PNG 蒙版。规范与验证见 ICON_SYSTEM.md。构建和 390／1440 浅深主题五页检查通过，全部图标离线可读。
+
+## 线上部署检查（2026-10-03）
+
+Cloudflare 构建 `e0fad1eb` 成功发布 `dist/`，版本 `9d437efb-e10f-4625-afad-e9ef6a03c02c`。构建命令 `npm run build`，部署命令 `npx wrangler deploy --name allen-one --assets ./dist --compatibility-date 2026-10-01`。独立 Edge 环境检查 HTTPS 首页 200、85 项资源清单、86 条完整缓存、断网刷新和无脚本错误；未写入用户真实浏览器数据。临时 Deploy Hook 已删除。iPhone 安装与从旧版本升级仍待真机验证。
