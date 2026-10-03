@@ -40,7 +40,7 @@
 
 ## 当前进度
 
-- 2026-10-03：用户授权初始化 Git、完善 README、脱敏检查并推送到 `https://github.com/ttguy0707/AllenOne.git`。本地使用 `main` 分支，配置 GitHub noreply 提交身份；README 已补充 Cloudflare 构建、更新和数据边界。Cloudflare 站点仍待创建与连接。
+- 2026-10-03：已初始化 Git，完成 README、暂存区隐私检查并推送到 `https://github.com/ttguy0707/AllenOne.git` 的 `main` 分支。首次实现提交为 `ed4b961`；使用 GitHub noreply 提交身份，8 项核心测试与构建通过。Cloudflare 站点仍待创建与连接。
 
 - AllenOne 品牌改为生图制作的标准大写 A、平面四色几何拼接，取消立体感并精修字形比例。其他 UI 图标按最新要求保持单色，用户允许素材网站来源；已接入 18 个 Google 官方 Material Symbols，本地 PNG 支持浅深主题与离线。规范与预览见 `ICON_SYSTEM.md`；具体美术待评审。
 
