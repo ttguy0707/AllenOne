@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">AllenOne</title>
+  <rect width="512" height="512" rx="112" fill="#fff"/>
+  <rect x="1" y="1" width="510" height="510" rx="111" fill="none" stroke="#e8edf5" stroke-width="2"/>
+  <g fill="none" stroke-width="60" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M148 356L237 164Q245 147 254 165" stroke="#4285f4"/>
+    <path d="M254 165L298 258" stroke="#ea4335"/>
+    <path d="M324 312L345 356" stroke="#fbbc04"/>
+    <path d="M190 290H337" stroke="#34a853" stroke-width="48"/>
+  </g>
+</svg>

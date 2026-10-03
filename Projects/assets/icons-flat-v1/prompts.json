@@ -1,0 +1,82 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "date": "2026-10-03",
+  "specs": [
+    {
+      "id": "brand",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. A perfectly recognizable STANDARD uppercase A, bold geometric sans-serif shape. Two straight diagonal legs, a pointed apex, one perfectly HORIZONTAL crossbar at the lower middle, a clean triangular counter above it and open space below the crossbar. Symmetric silhouette with balanced medium-wide proportions. NOT rounded swollen legs, NOT curved crossbar, NOT abstract. Elegant graphic design through PRECISE FLAT geometric color segmentation inside this single standard A silhouette: main left stroke blue #4285F4, right upper stroke red #EA4335, lower right green #34A853, crossbar golden yellow #FBBC04. Color fields meet flush with diagonal miter cuts and no gaps. Solid screenprint-like color, no tone variation. Original, refined, simple."
+    },
+    {
+      "id": "home",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Home navigation. Simple iconic house, blue #4285F4 pitched roof, green #34A853 rectangular base and a single large transparent doorway. Exactly two colors."
+    },
+    {
+      "id": "records",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Records navigation. Blue #4285F4 calendar with two top binder tabs, thick square outline, rounded corners, transparent interior with four chunky square date marks including one yellow #FBBC04 accent. No numbers."
+    },
+    {
+      "id": "pets",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Companion navigation. Friendly animal paw print: one large rounded triangular blue #4285F4 paw pad and four rounded toe pads, three blue and one green #34A853. Precise symmetric arrangement."
+    },
+    {
+      "id": "meals",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Meals navigation. Simple plate with open transparent center, bold green #34A853 circular ring, one blue #4285F4 fork on left. No knife, food or tiny details."
+    },
+    {
+      "id": "settings",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Settings navigation. A precise regular six-toothed gear, blue #4285F4 solid silhouette, large transparent circular hole at the center, one green #34A853 geometric accent segment. Clear symmetry."
+    },
+    {
+      "id": "strength",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Strength training. Horizontal dumbbell in blue #4285F4: short thick central bar, two equal broad rectangular weight plates each side, rounded corners, one green #34A853 endcap. Front elevation."
+    },
+    {
+      "id": "running",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Running sport. Dynamic side-view RUNNING SHOE silhouette in blue #4285F4 with a thick green #34A853 outsole, toe pointing right, raised heel, simple angular construction. No person, no laces, no brand marks, only two colors."
+    },
+    {
+      "id": "cycling",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Cycling sport. Clear bicycle side view with two equally sized thick blue #4285F4 circular wheels, triangular green #34A853 frame, chunky blue handlebars and saddle. Simplify small parts, no rider."
+    },
+    {
+      "id": "basketball",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Basketball sport. Perfect circle ball in golden yellow #FBBC04, bold blue #4285F4 equatorial seam and curved seams, exactly flat two colors. No hoop or court."
+    },
+    {
+      "id": "moon",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Dark theme. One bold simple crescent moon, single blue #4285F4 fill. No stars, craters or face. Generous clear center cutout."
+    },
+    {
+      "id": "sun",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Light theme. Sun with solid golden yellow #FBBC04 circular center and eight thick short evenly spaced rays. Completely flat."
+    },
+    {
+      "id": "system",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. System theme. Simple computer monitor with thick blue #4285F4 outline, transparent screen, one short central stand and a broad horizontal foot. No other details."
+    },
+    {
+      "id": "add",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Add action. A perfectly balanced simple plus sign with thick equal horizontal and vertical bars and slightly rounded ends. Single opaque blue #4285F4 fill."
+    },
+    {
+      "id": "close",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Close action. A simple symmetrical X cross with two thick equal diagonal strokes and slightly rounded ends. Single opaque blue #4285F4 fill."
+    },
+    {
+      "id": "next",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Forward navigation. One horizontal arrow pointing RIGHT, a thick straight shaft joined to a crisp chevron arrowhead, balanced proportions. Single blue #4285F4 fill."
+    },
+    {
+      "id": "previous",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Backward navigation. One horizontal arrow pointing LEFT, a thick straight shaft joined to a crisp chevron arrowhead, balanced proportions. Single blue #4285F4 fill."
+    },
+    {
+      "id": "external",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. View detail action. One diagonal arrow pointing UPPER RIGHT, thick straight shaft joined to an angular right-angle arrowhead. Single blue #4285F4 fill."
+    },
+    {
+      "id": "check",
+      "prompt": "Use case: logo-brand. One production PNG UI icon for AllenOne. Pure flat 2D geometric design with solid uniform colors and clean edges, substantial bold strokes and mildly rounded geometric corners. Google Material visual clarity. No gradients, no lighting, no shadows, no highlights, no perspective, no texture, no 3D, no folded paper. No labels, text, container, tile, frame, sparkles or mockup. Transparent background with actual alpha. Square canvas, icon centered with generous 16 percent transparent padding on all four sides. Legible at 24 pixels. Completed action. A single confident checkmark, short descending left arm and long ascending right arm. Thick stroke with subtly rounded ends, single green #34A853 fill."
+    }
+  ]
+}

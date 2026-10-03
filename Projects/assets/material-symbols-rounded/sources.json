@@ -1,0 +1,98 @@
+{
+  "source": "https://github.com/google/material-design-icons",
+  "license": "Apache-2.0",
+  "icons": [
+    {
+      "symbol": "home",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/home/materialsymbolsrounded/home_24px.svg",
+      "id": "home"
+    },
+    {
+      "symbol": "calendar_month",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/calendar_month/materialsymbolsrounded/calendar_month_24px.svg",
+      "id": "records"
+    },
+    {
+      "symbol": "pets",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/pets/materialsymbolsrounded/pets_24px.svg",
+      "id": "pets"
+    },
+    {
+      "symbol": "restaurant",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/restaurant/materialsymbolsrounded/restaurant_24px.svg",
+      "id": "meals"
+    },
+    {
+      "symbol": "settings",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/settings/materialsymbolsrounded/settings_24px.svg",
+      "id": "settings"
+    },
+    {
+      "symbol": "fitness_center",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/fitness_center/materialsymbolsrounded/fitness_center_24px.svg",
+      "id": "strength"
+    },
+    {
+      "symbol": "directions_run",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/directions_run/materialsymbolsrounded/directions_run_24px.svg",
+      "id": "running"
+    },
+    {
+      "symbol": "directions_bike",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/directions_bike/materialsymbolsrounded/directions_bike_24px.svg",
+      "id": "cycling"
+    },
+    {
+      "symbol": "sports_basketball",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/sports_basketball/materialsymbolsrounded/sports_basketball_24px.svg",
+      "id": "basketball"
+    },
+    {
+      "symbol": "dark_mode",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/dark_mode/materialsymbolsrounded/dark_mode_24px.svg",
+      "id": "moon"
+    },
+    {
+      "symbol": "light_mode",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/light_mode/materialsymbolsrounded/light_mode_24px.svg",
+      "id": "sun"
+    },
+    {
+      "symbol": "desktop_windows",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/desktop_windows/materialsymbolsrounded/desktop_windows_24px.svg",
+      "id": "system"
+    },
+    {
+      "symbol": "add",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/add/materialsymbolsrounded/add_24px.svg",
+      "id": "add"
+    },
+    {
+      "symbol": "close",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/close/materialsymbolsrounded/close_24px.svg",
+      "id": "close"
+    },
+    {
+      "symbol": "arrow_forward",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/arrow_forward/materialsymbolsrounded/arrow_forward_24px.svg",
+      "id": "next"
+    },
+    {
+      "symbol": "arrow_back",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/arrow_back/materialsymbolsrounded/arrow_back_24px.svg",
+      "id": "previous"
+    },
+    {
+      "symbol": "north_east",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/north_east/materialsymbolsrounded/north_east_24px.svg",
+      "id": "external"
+    },
+    {
+      "symbol": "check",
+      "url": "https://raw.githubusercontent.com/google/material-design-icons/737e3324305806514d7909874fa1818ae1808232/symbols/web/check/materialsymbolsrounded/check_24px.svg",
+      "id": "check"
+    }
+  ],
+  "variant": "Material Symbols Rounded, 24px, 400 weight, unfilled",
+  "revision": "737e3324305806514d7909874fa1818ae1808232"
+}

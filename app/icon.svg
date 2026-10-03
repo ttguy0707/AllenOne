@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+ <title id="title">AllenOne</title>
+ <rect width="512" height="512" rx="112" fill="#fff"/>
+ <rect x="1" y="1" width="510" height="510" rx="111" fill="none" stroke="#e8edf5" stroke-width="2"/>
+ <g transform="translate(-4 -4)">
+  <!-- Receding faces use one consistent, shallow depth. -->
+  <path d="M116 348L162 374V390L116 364Z" fill="#185abc"/>
+  <path d="M162 374L276 177V193L162 390Z" fill="#2469d8"/>
+  <path d="M338 247L365 294V310L338 263Z" fill="#b82c26"/>
+  <path d="M348 373L391 348V364L348 389Z" fill="#d58d00"/>
+  <path d="M164 310L312 286L312 302L164 326Z" fill="#188038"/>
+  <!-- Folded upper arms: broad blue face and a red return plane. -->
+  <path d="M116 348L231 150L276 177L162 374Z" fill="#4285f4"/>
+  <path d="M231 150L276 177L338 247L309 297Z" fill="#ea4335"/>
+  <path d="M231 150L276 177L268 191L223 164Z" fill="#77a7fa"/>
+  <!-- A stepped amber foot gives the mark an open, asymmetric silhouette. -->
+  <path d="M310 307L348 373L391 348L352 280Z" fill="#fbbc04"/>
+  <path d="M352 280L391 348L382 353L343 285Z" fill="#ffd45c"/>
+  <!-- The green linking plane is cut to the same perspective as the arms. -->
+  <path d="M187 271L320 249L350 285L164 310Z" fill="#34a853"/>
+  <path d="M187 271L320 249L327 258L182 282Z" fill="#72c98b"/>
+  <path d="M312 291L350 285L350 301L312 307Z" fill="#137333"/>
+ </g>
+</svg>

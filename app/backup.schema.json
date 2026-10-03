@@ -1,0 +1,463 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Wildfit portable backup 1.0.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "app_version": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "exported_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "rest_seconds": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 3600
+        },
+        "time_zone": {
+          "const": "Asia/Shanghai"
+        }
+      },
+      "required": [
+        "rest_seconds",
+        "time_zone"
+      ]
+    },
+    "scoring_rules": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "weekly-v1"
+        },
+        "start_week": {
+          "type": "string",
+          "format": "date"
+        },
+        "growth_version": {
+          "const": "growth-draft-v1"
+        }
+      },
+      "required": [
+        "version",
+        "start_week",
+        "growth_version"
+      ]
+    },
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "name": {
+            "type": "string"
+          },
+          "muscle": {
+            "type": "string"
+          },
+          "weight_basis": {
+            "type": "string"
+          },
+          "instruction": {
+            "type": "string"
+          },
+          "diagram": {
+            "type": "string"
+          },
+          "builtin": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "muscle",
+          "weight_basis",
+          "instruction",
+          "diagram",
+          "builtin"
+        ]
+      }
+    },
+    "workouts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "sport": {
+            "enum": [
+              "strength",
+              "running",
+              "cycling",
+              "basketball"
+            ]
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "duration_seconds": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 604800
+          },
+          "duration_source": {
+            "enum": [
+              "manual",
+              "timer",
+              "time_range"
+            ]
+          },
+          "started_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "ended_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "distance_meters": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          },
+          "template_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "exercises": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "exercise_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "name": {
+                  "type": "string"
+                },
+                "weight_basis": {
+                  "type": "string"
+                },
+                "sets": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 100
+                      },
+                      "weight_kg": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 5000
+                      },
+                      "reps": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 10000
+                      },
+                      "completed": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "weight_kg",
+                      "reps",
+                      "completed"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "exercise_id",
+                "name",
+                "weight_basis",
+                "sets"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "sport",
+          "date",
+          "duration_seconds",
+          "duration_source",
+          "started_at",
+          "ended_at",
+          "distance_meters",
+          "notes",
+          "template_id",
+          "created_at",
+          "updated_at",
+          "exercises"
+        ]
+      }
+    },
+    "templates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "name": {
+            "type": "string"
+          },
+          "exercises": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "exercise_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "target_sets": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 100
+                },
+                "target_reps": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 10000
+                }
+              },
+              "required": [
+                "exercise_id",
+                "target_sets",
+                "target_reps"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "exercises"
+        ]
+      }
+    },
+    "meals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "date",
+          "notes",
+          "created_at",
+          "updated_at"
+        ]
+      }
+    },
+    "settlements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "week": {
+            "type": "string",
+            "format": "date"
+          },
+          "pet_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "confirmed_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "week",
+          "pet_id",
+          "confirmed_at"
+        ]
+      }
+    },
+    "pets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "initial_score": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$"
+          },
+          "score": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$"
+          },
+          "threshold": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$"
+          },
+          "unlocked_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "claimed": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "initial_score",
+          "score",
+          "threshold",
+          "unlocked_at",
+          "source",
+          "claimed"
+        ]
+      }
+    },
+    "equipped": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "equipment_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pet_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "pet_id",
+          "at"
+        ]
+      }
+    },
+    "total_score": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)$"
+    },
+    "draft": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "app_version",
+    "created_at",
+    "exported_at",
+    "settings",
+    "scoring_rules",
+    "exercises",
+    "workouts",
+    "templates",
+    "meals",
+    "settlements",
+    "pets",
+    "equipped",
+    "equipment_events",
+    "total_score",
+    "draft"
+  ]
+}

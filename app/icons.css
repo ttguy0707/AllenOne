@@ -1,0 +1,26 @@
+/* Official Material Symbols Rounded. Local PNG alpha, neutral tone only. */
+.ui-icon{display:inline-block;width:20px;height:20px;flex-shrink:0;vertical-align:-4px;background-color:var(--muted);-webkit-mask:var(--icon-image) center/contain no-repeat;mask:var(--icon-image) center/contain no-repeat;pointer-events:none}
+.ui-icon-home{--icon-image:url("./assets/ui-icons/home.png")}
+.ui-icon-records{--icon-image:url("./assets/ui-icons/records.png")}
+.ui-icon-pets{--icon-image:url("./assets/ui-icons/pets.png")}
+.ui-icon-meals{--icon-image:url("./assets/ui-icons/meals.png")}
+.ui-icon-settings{--icon-image:url("./assets/ui-icons/settings.png")}
+.ui-icon-strength{--icon-image:url("./assets/ui-icons/strength.png")}
+.ui-icon-running{--icon-image:url("./assets/ui-icons/running.png")}
+.ui-icon-cycling{--icon-image:url("./assets/ui-icons/cycling.png")}
+.ui-icon-basketball{--icon-image:url("./assets/ui-icons/basketball.png")}
+.ui-icon-moon{--icon-image:url("./assets/ui-icons/moon.png")}
+.ui-icon-sun{--icon-image:url("./assets/ui-icons/sun.png")}
+.ui-icon-system{--icon-image:url("./assets/ui-icons/system.png")}
+.ui-icon-add{--icon-image:url("./assets/ui-icons/add.png")}
+.ui-icon-close{--icon-image:url("./assets/ui-icons/close.png")}
+.ui-icon-next{--icon-image:url("./assets/ui-icons/next.png")}
+.ui-icon-previous{--icon-image:url("./assets/ui-icons/previous.png")}
+.ui-icon-external{--icon-image:url("./assets/ui-icons/external.png")}
+.ui-icon-check{--icon-image:url("./assets/ui-icons/check.png")}
+button>.ui-icon{margin:0 3px}.nav .ui-icon{width:24px;height:24px;margin:0}.nav button.active .ui-icon{background-color:var(--ink)}
+.sport-button>.ui-icon{width:30px;height:30px;margin:0;background-color:var(--ink)}.sport-icon>.ui-icon{width:24px;height:24px;background-color:var(--ink)}
+.theme-toggle>.ui-icon{width:24px;height:24px;margin:0}.theme-picker .ui-icon{width:20px;height:20px;margin-right:7px}
+button.primary>.ui-icon{background-color:#fff}[data-theme=dark] button.primary>.ui-icon{background-color:#111318}
+.set-row button>.ui-icon{width:18px;height:18px;margin:0}.detail-sets .ui-icon{width:16px;height:16px;vertical-align:-3px}
+@media(forced-colors:active){.ui-icon{background-color:ButtonText;forced-color-adjust:none}}

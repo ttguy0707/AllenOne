@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "app_version": "0.1.0",
+  "created_at": "2025-01-01T00:00:00.000Z",
+  "settings": {
+    "rest_seconds": 90,
+    "time_zone": "Asia/Shanghai"
+  },
+  "scoring_rules": {
+    "version": "weekly-v1",
+    "start_week": "2025-01-06",
+    "growth_version": "growth-draft-v1"
+  },
+  "equipped": "rabbit",
+  "exercises": [
+    {
+      "id": "bench",
+      "name": "杠铃卧推",
+      "muscle": "胸部",
+      "weight_basis": "杠铃总重",
+      "diagram": "press",
+      "instruction": "平躺于凳面，双脚着地；缓慢下放，再推起。",
+      "builtin": true
+    },
+    {
+      "id": "incline",
+      "name": "上斜哑铃卧推",
+      "muscle": "胸部",
+      "weight_basis": "单只哑铃",
+      "diagram": "press",
+      "instruction": "背部贴住上斜靠背；双臂控制下放与推起。",
+      "builtin": true
+    },
+    {
+      "id": "squat",
+      "name": "杠铃深蹲",
+      "muscle": "腿部",
+      "weight_basis": "杠铃总重",
+      "diagram": "squat",
+      "instruction": "双脚稳定，屈髋屈膝下蹲，再站起。",
+      "builtin": true
+    },
+    {
+      "id": "deadlift",
+      "name": "罗马尼亚硬拉",
+      "muscle": "臀腿",
+      "weight_basis": "杠铃总重",
+      "diagram": "hinge",
+      "instruction": "膝微屈，髋向后移，重量沿腿部下降。",
+      "builtin": true
+    },
+    {
+      "id": "legpress",
+      "name": "器械腿举",
+      "muscle": "腿部",
+      "weight_basis": "器械标重",
+      "diagram": "squat",
+      "instruction": "背部贴靠垫，双腿屈伸，控制重量。",
+      "builtin": true
+    },
+    {
+      "id": "pulldown",
+      "name": "高位下拉",
+      "muscle": "背部",
+      "weight_basis": "器械标重",
+      "diagram": "pull",
+      "instruction": "躯干稳定，将握把拉向胸前，再缓慢还原。",
+      "builtin": true
+    },
+    {
+      "id": "row",
+      "name": "坐姿划船",
+      "muscle": "背部",
+      "weight_basis": "器械标重",
+      "diagram": "row",
+      "instruction": "坐姿挺胸，肘向后拉，再缓慢伸臂。",
+      "builtin": true
+    },
+    {
+      "id": "shoulder",
+      "name": "哑铃推肩",
+      "muscle": "肩部",
+      "weight_basis": "单只哑铃",
+      "diagram": "press",
+      "instruction": "坐姿稳定，从肩侧向上推举，再控制还原。",
+      "builtin": true
+    },
+    {
+      "id": "raise",
+      "name": "哑铃侧平举",
+      "muscle": "肩部",
+      "weight_basis": "单只哑铃",
+      "diagram": "raise",
+      "instruction": "肘部微屈，双臂向两侧抬起，再慢慢下降。",
+      "builtin": true
+    },
+    {
+      "id": "curl",
+      "name": "哑铃弯举",
+      "muscle": "手臂",
+      "weight_basis": "单只哑铃",
+      "diagram": "curl",
+      "instruction": "上臂保持稳定，屈肘抬起，再缓慢放下。",
+      "builtin": true
+    },
+    {
+      "id": "triceps",
+      "name": "绳索下压",
+      "muscle": "手臂",
+      "weight_basis": "器械标重",
+      "diagram": "pull",
+      "instruction": "肘在身体两侧，向下伸臂，再控制还原。",
+      "builtin": true
+    },
+    {
+      "id": "pullup",
+      "name": "引体向上",
+      "muscle": "背部",
+      "weight_basis": "自重",
+      "diagram": "pull",
+      "instruction": "双手握杠，屈肘上拉，再缓慢还原。",
+      "builtin": true
+    }
+  ],
+  "workouts": [
+    {
+      "id": "example-running",
+      "sport": "running",
+      "date": "2025-01-01",
+      "duration_seconds": 1800,
+      "duration_source": "manual",
+      "started_at": null,
+      "ended_at": null,
+      "distance_meters": 5000,
+      "notes": "虚构示例：轻松跑",
+      "template_id": null,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2025-01-01T00:00:00.000Z",
+      "exercises": []
+    }
+  ],
+  "templates": [],
+  "meals": [],
+  "settlements": [],
+  "pets": [
+    {
+      "id": "rabbit",
+      "initial_score": "60",
+      "score": "60",
+      "threshold": "120",
+      "unlocked_at": "2025-01-01T00:00:00.000Z",
+      "source": null,
+      "claimed": false
+    }
+  ],
+  "equipment_events": [
+    {
+      "pet_id": "rabbit",
+      "at": "2025-01-01T00:00:00.000Z"
+    }
+  ],
+  "total_score": "60",
+  "draft": null,
+  "exported_at": "2025-01-02T00:00:00Z"
+}

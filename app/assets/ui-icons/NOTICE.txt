@@ -1,0 +1,5 @@
+Material Symbols Rounded by Google
+Source: https://github.com/google/material-design-icons
+Revision: 737e3324305806514d7909874fa1818ae1808232
+License: Apache-2.0 (see LICENSE.txt)
+Modified only by rasterizing SVG to transparent 96px PNG.

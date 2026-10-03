@@ -1,0 +1,11 @@
+/* Baked studio lighting and transparent silhouettes fit both UI themes. */
+.pet-host{position:relative;touch-action:pan-y;isolation:isolate}
+.pet-host .companion-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;cursor:pointer;touch-action:pan-y}
+.animation-status{position:absolute;left:12%;right:12%;top:45%;text-align:center;font-size:12px;color:var(--muted)}
+.animation-status.retry{cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.animation-announcement{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.pet-portrait{display:block;width:86px;height:86px;object-fit:contain;max-width:100%;margin:0 auto 8px}
+.pet-card{padding-top:15px}.pet-card .pose{white-space:normal}
+.pending-portrait{display:flex;justify-content:center;align-items:center;text-align:center;color:var(--muted);font-size:11px;line-height:1.8;background:var(--surface-soft);border:1px dashed var(--line);border-radius:18px}
+.animation-unavailable{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);gap:12px;text-align:center;font-size:13px}.animation-unavailable>span{font-size:42px;color:var(--gold)}.animation-unavailable small{font-size:11px}
+@media(max-width:760px){.pet-portrait{width:69px;height:69px}.pet-card{padding-top:17px}}

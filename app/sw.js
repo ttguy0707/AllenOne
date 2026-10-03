@@ -1,0 +1,4 @@
+const CACHE='wildfit-shell-v1';
+self.addEventListener('install',e=>e.waitUntil((async()=>{const files=await fetch('./asset-list.json',{cache:'no-store'}).then(r=>r.json());const cache=await caches.open(CACHE);await cache.addAll([...files,'./']);})()));
+self.addEventListener('activate',e=>e.waitUntil((async()=>{for(const key of await caches.keys())if(key.startsWith('wildfit-shell-')&&key!==CACHE)await caches.delete(key);await self.clients.claim();})()));
+self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==self.location.origin)return;e.respondWith((async()=>{const hit=await caches.match(e.request,{ignoreSearch:true});if(hit)return hit;try{return await fetch(e.request);}catch(error){if(e.request.mode==='navigate')return caches.match('./');throw error;}})());});

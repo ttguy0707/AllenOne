@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>精灵栖息地 · 动态 3D 探索</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head>
+<body>
+  <header><a class="brand" href="./"><span class="brand-mark">✦</span> 精灵栖息地</a><span class="edition">动态 3D · 细节探索 02</span></header>
+  <main>
+    <section class="habitat" aria-label="交互式三维精灵">
+      <div class="scene-heading"><span class="eyebrow">陪伴，从一点点成长开始</span><h1 id="pet-title">月芽兔</h1><p id="pet-subtitle">十二生肖 · 温柔又好奇的小伙伴</p></div>
+      <div id="viewport" tabindex="0" aria-label="拖动旋转精灵，滚轮或双指缩放，方向键旋转，Home 重置视角"></div>
+      <div id="scene-error" hidden role="alert">暂时无法启动 3D 画面。请使用支持 WebGL 2 的浏览器并开启硬件加速。</div>
+      <div class="scene-footer"><span class="live"><i></i> 实时 3D</span><span>拖动环绕 · 双指缩放 · 方向键旋转</span><button id="reset-view" class="text-button">重置视角 ↺</button></div>
+    </section>
+    <aside>
+      <div class="section-intro"><span class="eyebrow">MEET YOUR COMPANION</span><h2>选一位新伙伴</h2><p>陆地、海洋与天空，都有成长的故事。</p></div>
+      <div class="pets" role="group" aria-label="选择原型角色">
+        <button class="pet-card selected" data-pet="rabbit" aria-pressed="true"><span class="pet-icon">兔</span><span><strong>月芽兔</strong><small>十二生肖</small></span><b>01</b></button>
+        <button class="pet-card" data-pet="dragon" aria-pressed="false"><span class="pet-icon">龙</span><span><strong>青芽龙</strong><small>十二生肖</small></span><b>02</b></button>
+        <button class="pet-card" data-pet="dolphin" aria-pressed="false"><span class="pet-icon">豚</span><span><strong>浪花豚</strong><small>海洋伙伴</small></span><b>03</b></button>
+        <button class="pet-card" data-pet="eagle" aria-pressed="false"><span class="pet-icon">鹰</span><span><strong>逐风鹰</strong><small>天空伙伴</small></span><b>04</b></button>
+      </div>
+      <section class="growth"><div class="row"><h3>看看成长的模样</h3><output id="stage-output">初生</output></div><input id="stage" type="range" min="1" max="5" value="1" step="1" aria-label="预览成长阶段"><div class="range-labels"><span>小小的开始</span><span>舒展的进化</span></div><p class="hint">拖动预览体型与装饰变化。阶段仅作视觉演示，尚未绑定正式分数。</p></section>
+      <section class="motion"><h3>和它打个招呼</h3><div class="actions"><button id="greet" class="primary">✧ 打个招呼</button><button id="pause" aria-pressed="false">暂停动作</button><button id="rotate" aria-pressed="false">自动环绕</button></div><p id="action-description" class="hint" aria-live="polite">呼吸、眨眼、耳朵轻摆，试着和它打个招呼。</p></section>
+      <div class="scope"><span>图鉴方向</span><p>十二生肖 · 常见海洋生物 · 鸟类与鹰类</p><small>第二版细节探索：连续曲面、分层羽翼与独立材质。先比较四种角色，最终造型仍可调整。</small></div>
+    </aside>
+  </main>
+  <footer>一次坚持，一点成长。<span>原型不读写运动记录或养成分数。</span></footer>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
