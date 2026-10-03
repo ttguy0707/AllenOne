@@ -6,6 +6,8 @@
 | --- | --- |
 | [PROJECT.md](PROJECT.md) | 用户目标、环境、约束、已确认范围与当前进度 |
 | [REQUIREMENTS.md](REQUIREMENTS.md) | 第一版已确认功能清单、用户流程与验收场景 |
+| [WORKOUT_FLOW.md](WORKOUT_FLOW.md) | 最新：训记参考、运动录入实现及中断保护验收 |
+| [MACOS_UI.md](MACOS_UI.md) | 最新：macOS 视觉、交互流畅度与多 agent 交叉评审 |
 | [DECISIONS.md](DECISIONS.md) | 已确认决策、原因与变更历史 |
 | [DESIGN.md](DESIGN.md) | 当前设计基线、候选方案与待收敛问题 |
 | [DATA_FORMAT.md](DATA_FORMAT.md) | 数据可迁移要求、字段与导出格式草案、后续验收标准 |
@@ -15,17 +17,19 @@
 | [PET_ROSTER.md](PET_ROSTER.md) | 24 种精灵的不同主姿态、待机、互动与成长设计 |
 | [IMPLEMENTATION.md](IMPLEMENTATION.md) | 主应用架构、当前功能、验证和剩余边界 |
 | [VISUAL_SYSTEM.md](VISUAL_SYSTEM.md) | 视觉历史与当前规范路由 |
-| [MATERIAL_UI.md](MATERIAL_UI.md) | 最新：AllenOne 品牌、Google Material 风格、主题与兼容 |
+| [MATERIAL_UI.md](MATERIAL_UI.md) | 历史：AllenOne 品牌与前轮 Google Material 风格 |
 | [ICON_SYSTEM.md](ICON_SYSTEM.md) | 标准 A 生图品牌、单色 Material 图标、素材来源与打包 |
 | [ANIMATED_COMPANIONS.md](ANIMATED_COMPANIONS.md) | 最新：预渲染立体动画替换实时模型，资源与播放规范 |
 
 ## 当前阶段
 
-应用已命名 **AllenOne**。按用户最新要求改为 Google Material 风格，运动功能优先、蓝色主色、浅深主题，见 `MATERIAL_UI.md`；旧 Atelier 为历史方案。
+最新迭代按用户要求分步推进：先参考训记、简化运动记录；随后补齐马／鳐、强化成长形态区别、取消外观预览、将未解锁图鉴置灰。录入、macOS 交互与 24 种五阶段资源已实现，最终回归与发布状态见 PROJECT.md。
 
-最新方向：用户否定现有实体模型效果，已确认改用预渲染立体角色动画，取消实时模型与旋转；当前已接入 22 套动画，马／鳐素材受生成服务拦截而待补充；详见 `ANIMATED_COMPANIONS.md`。
+应用已命名 **AllenOne**。用户最新要求 macOS 风格，并重新审视交互与流畅度，当前规范见 `MACOS_UI.md`；Google Material 与 Atelier 保留为历史。
 
-当前部署：2026-10-03，已发布 Cloudflare Workers 并验证线上资源与离线刷新。Cloudflare 关联复制仓库与本地 origin 不同，自动更新前需统一关联，详见 `PROJECT.md` 和根 README；iPhone 真机验证及最新美术评审仍待完成。前轮实时模型仅作为历史，功能状态见 `IMPLEMENTATION.md`。
+最新方向：用户否定现有实体模型效果，已确认改用预渲染立体角色动画，取消实时模型与旋转；当前已接入 24 套五阶段动画，马／鳐已补齐；详见 `ANIMATED_COMPANIONS.md`。
+
+当前部署：2026-10-03，已发布 Cloudflare Workers 并验证线上资源与离线刷新。Cloudflare 已重新关联 AllenOne/main，与本地 origin 一致，详见 `PROJECT.md` 和根 README；iPhone 真机验证及最新美术评审仍待完成。前轮实时模型仅作为历史，功能状态见 `IMPLEMENTATION.md`。
 
 ## 记录约定
 

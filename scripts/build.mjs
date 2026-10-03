@@ -5,6 +5,10 @@ import {createHash} from 'node:crypto';
 await mkdir('dist',{recursive:true});
 // Remove only obsolete generated artifacts inside the verified build directory.
 const output=path.resolve('dist'),legacy=['vendor','model-kit.js','model-finishing.js','pet-models.js','atelier.css','icon.svg'];
+// Runtime companion atlases are replaced as a set; do not cache retired v1 files.
+const companionOutput=path.resolve(output,'assets/companions');
+if(!companionOutput.startsWith(output+path.sep))throw Error('Companion output outside dist');
+await rm(companionOutput,{recursive:true,force:true});
 for(const file of legacy){const target=path.resolve(output,file);if(!target.startsWith(output+path.sep))throw Error('Build path outside dist');await rm(target,{recursive:true,force:true});}
 await cp('app','dist',{recursive:true,filter:source=>!legacy.includes(path.relative(path.resolve('app'),path.resolve(source)))});
 async function walk(dir){const out=[];for(const e of await readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())out.push(...await walk(p));else out.push('./'+path.relative('dist',p).replaceAll('\\','/'));}return out;}

@@ -440,6 +440,14 @@
         "object",
         "null"
       ]
+    },
+    "recording_sessions": {
+      "type": "array",
+      "maxItems": 104,
+      "items": {
+        "type": "object"
+      },
+      "description": "Optional in-progress records, same fields as legacy draft; unique by record id or sport. Older backups may omit this field."
     }
   },
   "required": [

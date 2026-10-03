@@ -2,18 +2,18 @@
 
 供个人使用的运动记录与精灵养成 PWA。面向 iPhone，支持 Windows 本地开发；无需登录，记录保存在当前设备，提供完整备份与迁移说明。
 
-![AllenOne 图标与主题](Projects/assets/allenone-icons-overview.png)
+![AllenOne macOS 风格界面（空白测试数据）](Projects/assets/allenone-macos-overview.png)
 
-> 当前为开发版。主应用在 `app/`，可构建为静态 HTTPS 网站。尚未完成 iPhone 真机验收；24 位精灵中已有 22 套动画，马和鳐的动画仍待补充。
+> 当前为开发版。主应用在 `app/`，可构建为静态 HTTPS 网站。尚未完成 iPhone 真机验收；24 位精灵均有五阶段预渲染动画。
 
 ## 功能
 
 - **运动记录**：力量逐组重量／次数、跑步距离／配速、骑行距离／均速、篮球起止时间，支持补记、编辑和删除。
-- **力量训练**：12 个内置动作与示意、自定义动作、训练模板、上次记录、训练计时、前台组间休息提醒及草稿恢复。
+- **力量训练**：12 个内置动作与示意、自定义动作、训练模板、上次记录、自动训练计时、前台组间休息提醒及后台中断保护。
 - **统计回看**：运动日历、周／月天数与时长、分类汇总、力量动作历史。
 - **放纵餐**：北京时间每周最多一次达标，确认后结算；连续达标 +1、+2、+4…，连续超标 −2、−4、−8…，切换后重置倍数。
-- **精灵养成**：总分与各精灵分独立维护，当前装配精灵接收周结算；永久解锁、装配、成长预览与预渲染逐帧动画。
-- **主题与离线**：Google Material 风格，浅色／深色／跟随系统；首次完整缓存后可离线打开与记录。
+- **精灵养成**：总分与各精灵分独立维护，当前装配精灵接收周结算；永久解锁、装配、五阶段形态与预渲染逐帧动画；未解锁图鉴置灰，不提供外观预览。
+- **主题与离线**：macOS 风格，浅色／深色／跟随系统；首次完整缓存后可离线打开与记录。
 - **备份迁移**：完整 JSON 导出／导入、运动 CSV、机器可读 Schema 和明确标注的虚构示例。
 
 ## 本地开发
@@ -43,7 +43,7 @@ Windows PowerShell 若限制执行 npm 脚本，可将 `npm` 写作 `npm.cmd`。
 | 根目录 | `/` |
 | 生产分支 | `main` |
 
-2026-10-03 核对发现，创建流程复制了仓库，当前构建关联 `ttguy0707/allen-one`；本地 origin 仍为用户指定的 `ttguy0707/AllenOne`。两者尚未统一，推送本地 origin 不会触发现有 Worker 更新。后续需明确统一仓库关联，避免在两个仓库分别维护代码。
+2026-10-03 已将同一 Worker 重新关联到用户指定的 `ttguy0707/AllenOne`，生产分支为 `main`，与本地 origin 一致。复制仓库 `ttguy0707/allen-one` 不再负责本站发布，未删除其中内容。
 
 修改构建设置后，在 **Deployments → Go to build history → 最新普通构建 → Retry build** 重试。初始模板构建可能因 `seed_repo override` 无法重试；本次通过临时 Deploy Hook 创建普通构建，使用后删除入口。不要将 Hook URL 或 API Token 写入仓库。
 
@@ -72,7 +72,7 @@ Windows PowerShell 若限制执行 npm 脚本，可将 `npm` 写作 `npm.cmd`。
 
 1. 修改源码并在本地构建、验证。
 2. 检查暂存内容，提交并推送至 `main`。
-3. 只有推送到 Cloudflare 实际关联的仓库／分支，才会触发自动构建并发布到原生产地址；当前 Workers 仓库关联差异见上文。
+3. 只有推送到 Cloudflare 实际关联的仓库／分支，才会触发自动构建并发布到原生产地址；当前已统一为 AllenOne/main。
 4. 手机联网打开以下载新版本；当前没有“发现新版本”提示，可能需要关闭 AllenOne 和同站点 Safari 页面，再重新打开。
 
 构建根据资源内容生成新离线缓存版本。正常资源更新不清空 IndexedDB；若变更数据结构，需要另行实现迁移。请勿用清除网站数据作为日常更新方式。
@@ -99,10 +99,8 @@ npm run build
 
 ```sh
 npm run check
-node tests/settlement-browser.mjs
-node tests/timers-browser.mjs
-node tests/appearance-browser.mjs
-node tests/animation-browser.mjs
+
+# npm run check 已包含录入、恢复、计时、结算、精灵及 macOS 交互专项
 ```
 
 测试使用独立浏览器上下文，结果保存在忽略目录 `test-results/`。桌面手机宽度模拟不能代替 iPhone Safari 的安装、触控、后台恢复和长期存储验证。

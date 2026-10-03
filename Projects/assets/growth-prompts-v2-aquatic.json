@@ -1,0 +1,278 @@
+{
+  "schema": "allenone-companion-growth-source-v2",
+  "generatedDate": "2026-10-03",
+  "tool": "image_gen.imagegen (built-in; no CLI or external paid API)",
+  "status": "source-art-reviewed; runtime-packing-pending",
+  "columns": 4,
+  "rows": 5,
+  "stages": [
+    "幼体",
+    "幼年",
+    "少年",
+    "成年",
+    "盛年"
+  ],
+  "validation": {
+    "method": "Visual inspection of every generated sheet plus read-only Canvas alpha connected-component scan.",
+    "componentAlphaThreshold": 64,
+    "minimumMainComponentPixels": 500,
+    "eachSelectedSourceHasTwentyIndependentMainSilhouettes": true,
+    "selectedSourcesTouchImageBoundary": false,
+    "sha256UniqueAcrossFiveSpecies": true,
+    "gridNote": "Generated source art is logically 4x5 but does not perfectly meet equal-cell spacing or requested 75% occupancy. Consumer must use transparent connected-component extraction and normalized runtime packing. Final art acceptance remains with user."
+  },
+  "pets": [
+    {
+      "id": "dolphin",
+      "name": "浪花豚",
+      "source": "Projects/assets/animation-source/dolphin-growth-v2.png",
+      "sha256": "7C81DCA6A947607A76A06DE9249D3A0C3232C88FC2F1CFADF71BF670EC933DD9",
+      "width": 1122,
+      "height": 1402,
+      "columns": 4,
+      "rows": 5,
+      "stages": [
+        "幼体",
+        "幼年",
+        "少年",
+        "成年",
+        "盛年"
+      ],
+      "frameCount": 20,
+      "framesPerStage": 4,
+      "tool": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept.\nAsset type: production growth animation sprite atlas for a companion app.\nCreate ONE portrait PNG, ideally 2048x2560 pixels, EXACTLY FOUR COLUMNS and FIVE ROWS = TWENTY full-body animal frames. Equal rectangular grid cells. No written numbers, text, labels, lines, borders or checkerboard. Genuine transparent alpha background. No floor or cast shadows.\nEvery row is a different age of the SAME animal. Within each row repeat that age for a consistent four-frame idle animation: column 1 relaxed eyes open, column 2 tiny inhale/motion, column 3 blink at motion peak, column 4 eyes reopened returning to initial pose. Tiny movement only. Fixed camera, viewing direction, soft studio key and cool rim lighting across all twenty frames. Animal silhouette remains entirely inside the central 75% of each cell, at least 15% empty transparent separation between adjacent animals, never clipped.\nPremium polished pre-rendered 3D animation-film animal, sophisticated appealing anatomy and tactile appropriate skin texture. Not primitive spheres, not flat illustration, not plastic. No clothing or crowns. The five age rows MUST change actual head-to-body ratio, appendage length, body silhouette, face anatomy and natural material structure. DO NOT merely scale one model or add accessories. Adult eyes are proportionally smaller; adults look anatomically grown and elegant, while retaining friendliness. Make top and bottom rows unmistakably different ages even if resized to same height.\nSubject: one silver-blue bottlenose dolphin with white belly, friendly expressive teal eyes, horizontal swimming pose facing upper right, gentle curve from rostrum through tail. All fins and both tail flukes visible in every frame. Three-quarter side view with near side exposed. Refined silvery skin and subtle aqua edge light, no extraneous glows.\nAge rows, mandatory distinct anatomy:\nRow 1 hatchling-like newborn calf: very round bulbous forehead, huge eye, extremely short stubby rostrum, plump short torso, tiny rounded dorsal and pectoral fins, short tail peduncle.\nRow 2 young calf: rounded forehead and cheek, slightly longer rostrum, chubby but visibly elongated torso, short fins, small tail flukes.\nRow 3 adolescent: long streamlined torso, head relatively smaller, distinct bottlenose beak, growing swept triangular dorsal fin and longer pectoral fins, narrow waist into tail.\nRow 4 adult: elegant muscular long spindle body, adult forehead, longer distinct narrow rostrum, smaller eye, swept pointed fins, long slim tail peduncle and wide flukes.\nRow 5 full-grown mature adult: longest robust streamlined torso and broad chest tapering into an elongated narrow tail peduncle, powerful wide flukes, well-defined swept fins, realistically proportioned small eye, subtly textured mature blue-grey skin. Retain graceful friendliness, no scars.\nWithin each row only slight up/down tail beat and a blink; same age and body proportions across four columns. Each entire dolphin including tail stays well inside its equal cell. No water, bubbles, decorations or reflections.",
+      "selectedAttempt": "layout-correction",
+      "layoutCorrectionPrompt": "Use case: precise-object-edit.\nEdit target: the provided existing growth animation sprite sheet of dolphin.\nChange ONLY layout, scale within the grid and transparent gutters. Preserve its five clearly different age anatomies, exact species, colors, polished 3D style and four subtle animation poses per age.\nMandatory output layout: ONE portrait PNG with genuine transparent alpha, exactly 4 columns by 5 rows of equal SQUARE cells. Requested image size 2048 by 2560 pixels, so each invisible cell is 512 by 512 pixels. Absolute cell centers x=256,768,1280,1792 and y=256,768,1280,1792,2304. If output resolution differs, preserve this exact proportional equal grid.\nPut exactly ONE complete animal at each cell center, all 20 centered individually. Shrink each complete silhouette until it fits within a maximum 320 by 320 pixel box at 2048x2560 resolution (62.5% of the cell's width and height). Every cell MUST therefore have at least 18.75% completely empty transparent margin on all four sides. Adults must be scaled down to satisfy identical cell occupancy limits: their maturity is shown by anatomy, NOT by taking more cell space.\nDo not preserve the original compressed row spacing, or any overlap or touching between animals. Uniform top/bottom row spacing is CRITICAL. An empty invisible horizontal gutter approximately 180 pixels high must separate every row of silhouettes, including rows 4 and 5; equally generous vertical gutters separate columns.\nKeep every tail, flipper, arm and tentacle tip fully intact. Do not crop any frame. No visible grid, no labels, no borders, no text, no shadow, no floor, no extra particles, no colored background and no checkerboard. Preserve the image's five distinct growth forms and four-column timing. Layout correction only.",
+      "retainedAttempts": [
+        {
+          "source": "tmp/growth-drafts/dolphin-growth-v2-draft1.png",
+          "tool": "image_gen.imagegen",
+          "prompt": "Use case: stylized-concept.\nAsset type: production growth animation sprite atlas for a companion app.\nCreate ONE portrait PNG, ideally 2048x2560 pixels, EXACTLY FOUR COLUMNS and FIVE ROWS = TWENTY full-body animal frames. Equal rectangular grid cells. No written numbers, text, labels, lines, borders or checkerboard. Genuine transparent alpha background. No floor or cast shadows.\nEvery row is a different age of the SAME animal. Within each row repeat that age for a consistent four-frame idle animation: column 1 relaxed eyes open, column 2 tiny inhale/motion, column 3 blink at motion peak, column 4 eyes reopened returning to initial pose. Tiny movement only. Fixed camera, viewing direction, soft studio key and cool rim lighting across all twenty frames. Animal silhouette remains entirely inside the central 75% of each cell, at least 15% empty transparent separation between adjacent animals, never clipped.\nPremium polished pre-rendered 3D animation-film animal, sophisticated appealing anatomy and tactile appropriate skin texture. Not primitive spheres, not flat illustration, not plastic. No clothing or crowns. The five age rows MUST change actual head-to-body ratio, appendage length, body silhouette, face anatomy and natural material structure. DO NOT merely scale one model or add accessories. Adult eyes are proportionally smaller; adults look anatomically grown and elegant, while retaining friendliness. Make top and bottom rows unmistakably different ages even if resized to same height.\nSubject: one silver-blue bottlenose dolphin with white belly, friendly expressive teal eyes, horizontal swimming pose facing upper right, gentle curve from rostrum through tail. All fins and both tail flukes visible in every frame. Three-quarter side view with near side exposed. Refined silvery skin and subtle aqua edge light, no extraneous glows.\nAge rows, mandatory distinct anatomy:\nRow 1 hatchling-like newborn calf: very round bulbous forehead, huge eye, extremely short stubby rostrum, plump short torso, tiny rounded dorsal and pectoral fins, short tail peduncle.\nRow 2 young calf: rounded forehead and cheek, slightly longer rostrum, chubby but visibly elongated torso, short fins, small tail flukes.\nRow 3 adolescent: long streamlined torso, head relatively smaller, distinct bottlenose beak, growing swept triangular dorsal fin and longer pectoral fins, narrow waist into tail.\nRow 4 adult: elegant muscular long spindle body, adult forehead, longer distinct narrow rostrum, smaller eye, swept pointed fins, long slim tail peduncle and wide flukes.\nRow 5 full-grown mature adult: longest robust streamlined torso and broad chest tapering into an elongated narrow tail peduncle, powerful wide flukes, well-defined swept fins, realistically proportioned small eye, subtly textured mature blue-grey skin. Retain graceful friendliness, no scars.\nWithin each row only slight up/down tail beat and a blink; same age and body proportions across four columns. Each entire dolphin including tail stays well inside its equal cell. No water, bubbles, decorations or reflections.",
+          "selected": false,
+          "note": "Initial image retained; selected version has revised spacing."
+        }
+      ],
+      "visualReview": {
+        "inspected": true,
+        "growth": "幼体圆额、短吻、巨大眼和极短尾柄；少年开始细长化；成年及盛年为小眼、长吻、修长肌肉躯干和长尾柄，幼成轮廓明显不同。成年与盛年的差异较幼成差异更细微。",
+        "animation": "每行第三列闭眼，其他列有细小鳍尾姿态变化；同一行保持同龄比例。",
+        "layout": "四列五行清楚；成体轮廓有横向越过数学等分线，原图四周完整，20个主体彼此独立。必须按透明连通轮廓提取，不能直接规则等分。"
+      },
+      "technicalReview": {
+        "connectedMainSilhouettes": 20,
+        "alphaCorners": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mainSilhouetteTouchesWholeImageBoundary": false,
+        "requiresComponentPacking": true
+      }
+    },
+    {
+      "id": "whale",
+      "name": "蓝湾鲸",
+      "source": "Projects/assets/animation-source/whale-growth-v2.png",
+      "sha256": "019F1FF383643C48B6094AA9E7B79123C6349CFB3D2C2548FD1E78FE34116D28",
+      "width": 1122,
+      "height": 1402,
+      "columns": 4,
+      "rows": 5,
+      "stages": [
+        "幼体",
+        "幼年",
+        "少年",
+        "成年",
+        "盛年"
+      ],
+      "frameCount": 20,
+      "framesPerStage": 4,
+      "tool": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept.\nAsset type: production growth animation sprite atlas for a companion app.\nCreate ONE portrait PNG, ideally 2048x2560 pixels, EXACTLY FOUR COLUMNS and FIVE ROWS = TWENTY full-body animal frames. Equal rectangular grid cells. No written numbers, text, labels, lines, borders or checkerboard. Genuine transparent alpha background. No floor or cast shadows.\nEvery row is a different age of the SAME animal. Within each row repeat that age for a consistent four-frame idle animation: column 1 relaxed eyes open, column 2 tiny inhale/motion, column 3 blink at motion peak, column 4 eyes reopened returning to initial pose. Tiny movement only. Fixed camera, viewing direction, soft studio key and cool rim lighting across all twenty frames. Animal silhouette remains entirely inside the central 75% of each cell, at least 15% empty transparent separation between adjacent animals, never clipped.\nPremium polished pre-rendered 3D animation-film animal, sophisticated appealing anatomy and tactile appropriate skin texture. Not primitive spheres, not flat illustration, not plastic. No clothing or crowns. The five age rows MUST change actual head-to-body ratio, appendage length, body silhouette, face anatomy and natural material structure. DO NOT merely scale one model or add accessories. Adult eyes are proportionally smaller; adults look anatomically grown and elegant, while retaining friendliness. Make top and bottom rows unmistakably different ages even if resized to same height.\nSubject: one friendly blue-grey humpback whale with ivory throat pleats, horizontal three-quarter side swimming facing upper right. Large rounded body, characteristic long flippers and paired tail flukes. Soft realistic moist skin, small natural bumps, calm warm eye. No water spray or environmental elements.\nAge rows, mandatory distinct anatomy:\nRow 1 newborn calf: compact plump bean-shaped short body, head almost half the torso volume, huge eye, rounded small flippers and short narrow tail, soft barely indicated throat pleats.\nRow 2 young calf: fuller chest and slightly longer body, still oversized head, medium eye, stubby rounded flippers beginning to lengthen, wider tail, a few shallow belly pleats.\nRow 3 adolescent: longer body, clearly defined taper to tail, head-to-body ratio reduced, medium-long flippers and broader flukes, throat grooves more developed.\nRow 4 adult: massive elongated trunk, relatively smaller head and eye, very long curved humpback flippers, narrow tail peduncle, broad powerful flukes, distinct natural throat pleats.\nRow 5 mature adult: deep muscular adult torso with long taper, broad angular mature jaw, very small friendly eye, broad long scalloped flippers and expanded tail flukes, detailed ivory throat pleats and a few natural pale skin mottles. Anatomical maturity must be obvious versus row 1 even when normalized to same size.\nOnly tiny flipper/tail changes and one blink per row. Fixed side-view angle and consistent pose; full whale and complete flukes fit inside central 75% of each cell. No floor, water, halo or decorations.",
+      "selectedAttempt": "layout-correction",
+      "layoutCorrectionPrompt": "Use case: precise-object-edit.\nEdit target: the provided existing growth animation sprite sheet of whale.\nChange ONLY layout, scale within the grid and transparent gutters. Preserve its five clearly different age anatomies, exact species, colors, polished 3D style and four subtle animation poses per age.\nMandatory output layout: ONE portrait PNG with genuine transparent alpha, exactly 4 columns by 5 rows of equal SQUARE cells. Requested image size 2048 by 2560 pixels, so each invisible cell is 512 by 512 pixels. Absolute cell centers x=256,768,1280,1792 and y=256,768,1280,1792,2304. If output resolution differs, preserve this exact proportional equal grid.\nPut exactly ONE complete animal at each cell center, all 20 centered individually. Shrink each complete silhouette until it fits within a maximum 320 by 320 pixel box at 2048x2560 resolution (62.5% of the cell's width and height). Every cell MUST therefore have at least 18.75% completely empty transparent margin on all four sides. Adults must be scaled down to satisfy identical cell occupancy limits: their maturity is shown by anatomy, NOT by taking more cell space.\nDo not preserve the original compressed row spacing, or any overlap or touching between animals. Uniform top/bottom row spacing is CRITICAL. An empty invisible horizontal gutter approximately 180 pixels high must separate every row of silhouettes, including rows 4 and 5; equally generous vertical gutters separate columns.\nKeep every tail, flipper, arm and tentacle tip fully intact. Do not crop any frame. No visible grid, no labels, no borders, no text, no shadow, no floor, no extra particles, no colored background and no checkerboard. Preserve the image's five distinct growth forms and four-column timing. Layout correction only.",
+      "retainedAttempts": [
+        {
+          "source": "tmp/growth-drafts/whale-growth-v2-draft1.png",
+          "tool": "image_gen.imagegen",
+          "prompt": "Use case: stylized-concept.\nAsset type: production growth animation sprite atlas for a companion app.\nCreate ONE portrait PNG, ideally 2048x2560 pixels, EXACTLY FOUR COLUMNS and FIVE ROWS = TWENTY full-body animal frames. Equal rectangular grid cells. No written numbers, text, labels, lines, borders or checkerboard. Genuine transparent alpha background. No floor or cast shadows.\nEvery row is a different age of the SAME animal. Within each row repeat that age for a consistent four-frame idle animation: column 1 relaxed eyes open, column 2 tiny inhale/motion, column 3 blink at motion peak, column 4 eyes reopened returning to initial pose. Tiny movement only. Fixed camera, viewing direction, soft studio key and cool rim lighting across all twenty frames. Animal silhouette remains entirely inside the central 75% of each cell, at least 15% empty transparent separation between adjacent animals, never clipped.\nPremium polished pre-rendered 3D animation-film animal, sophisticated appealing anatomy and tactile appropriate skin texture. Not primitive spheres, not flat illustration, not plastic. No clothing or crowns. The five age rows MUST change actual head-to-body ratio, appendage length, body silhouette, face anatomy and natural material structure. DO NOT merely scale one model or add accessories. Adult eyes are proportionally smaller; adults look anatomically grown and elegant, while retaining friendliness. Make top and bottom rows unmistakably different ages even if resized to same height.\nSubject: one friendly blue-grey humpback whale with ivory throat pleats, horizontal three-quarter side swimming facing upper right. Large rounded body, characteristic long flippers and paired tail flukes. Soft realistic moist skin, small natural bumps, calm warm eye. No water spray or environmental elements.\nAge rows, mandatory distinct anatomy:\nRow 1 newborn calf: compact plump bean-shaped short body, head almost half the torso volume, huge eye, rounded small flippers and short narrow tail, soft barely indicated throat pleats.\nRow 2 young calf: fuller chest and slightly longer body, still oversized head, medium eye, stubby rounded flippers beginning to lengthen, wider tail, a few shallow belly pleats.\nRow 3 adolescent: longer body, clearly defined taper to tail, head-to-body ratio reduced, medium-long flippers and broader flukes, throat grooves more developed.\nRow 4 adult: massive elongated trunk, relatively smaller head and eye, very long curved humpback flippers, narrow tail peduncle, broad powerful flukes, distinct natural throat pleats.\nRow 5 mature adult: deep muscular adult torso with long taper, broad angular mature jaw, very small friendly eye, broad long scalloped flippers and expanded tail flukes, detailed ivory throat pleats and a few natural pale skin mottles. Anatomical maturity must be obvious versus row 1 even when normalized to same size.\nOnly tiny flipper/tail changes and one blink per row. Fixed side-view angle and consistent pose; full whale and complete flukes fit inside central 75% of each cell. No floor, water, halo or decorations.",
+          "selected": false,
+          "note": "Initial image retained; selected version has revised spacing."
+        }
+      ],
+      "visualReview": {
+        "inspected": true,
+        "growth": "幼体圆短、大眼、短鳍；少年躯干与胸鳍拉长；成体小眼、长鳍、长躯干及清楚腹沟；盛年胸鳍与腹沟更厚实并有自然皮肤斑纹。",
+        "animation": "第三列眨眼，四列小幅鳍尾变化。",
+        "layout": "布局修订改善留白；全身及尾鳍完整，20个独立主体，透明角点。仍按轮廓打包以统一基线和安全边距。"
+      },
+      "technicalReview": {
+        "connectedMainSilhouettes": 20,
+        "alphaCorners": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mainSilhouetteTouchesWholeImageBoundary": false,
+        "requiresComponentPacking": true
+      }
+    },
+    {
+      "id": "turtle",
+      "name": "珊瑚龟",
+      "source": "Projects/assets/animation-source/turtle-growth-v2.png",
+      "sha256": "29A99C73229DDAE5EA24734F62007377962EC1C78CBD0CC2182E57155FB51E17",
+      "width": 1122,
+      "height": 1402,
+      "columns": 4,
+      "rows": 5,
+      "stages": [
+        "幼体",
+        "幼年",
+        "少年",
+        "成年",
+        "盛年"
+      ],
+      "frameCount": 20,
+      "framesPerStage": 4,
+      "tool": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept.\nAsset type: production growth animation sprite atlas for a companion app.\nCreate ONE portrait PNG, ideally 2048x2560 pixels, EXACTLY FOUR COLUMNS and FIVE ROWS = TWENTY full-body animal frames. Equal rectangular grid cells. No written numbers, text, labels, lines, borders or checkerboard. Genuine transparent alpha background. No floor or cast shadows.\nEvery row is a different age of the SAME animal. Within each row repeat that age for a consistent four-frame idle animation: column 1 relaxed eyes open, column 2 tiny inhale/motion, column 3 blink at motion peak, column 4 eyes reopened returning to initial pose. Tiny movement only. Fixed camera, viewing direction, soft studio key and cool rim lighting across all twenty frames. Animal silhouette remains entirely inside the central 75% of each cell, at least 15% empty transparent separation between adjacent animals, never clipped.\nPremium polished pre-rendered 3D animation-film animal, sophisticated appealing anatomy and tactile appropriate skin texture. Not primitive spheres, not flat illustration, not plastic. No clothing or crowns. The five age rows MUST change actual head-to-body ratio, appendage length, body silhouette, face anatomy and natural material structure. DO NOT merely scale one model or add accessories. Adult eyes are proportionally smaller; adults look anatomically grown and elegant, while retaining friendliness. Make top and bottom rows unmistakably different ages even if resized to same height.\nSubject: one green sea turtle swimming diagonally downward toward the viewer's right, fixed three-quarter view from slightly above, four swimming flippers splayed, olive and teal skin with natural fine scales and amber-brown scuted carapace, cream underside. Friendly calm eyes. No coral objects or environment.\nAge rows, mandatory distinct anatomy:\nRow 1 hatchling: short round compact shell with faint baby ridges, enormous round head and eyes relative to the shell, very short neck, stubby oval front flippers and tiny rear flippers, delicate fine skin.\nRow 2 juvenile: small oval domed shell, rounded face still large, slightly longer neck, short paddle-shaped flippers, clearer individual shell scutes.\nRow 3 adolescent: distinctly elongated flattened oval shell, head relatively smaller with a more defined beak, growing long front flippers and visible muscular shoulders, developed fine scale pattern.\nRow 4 adult: broad long low hydrodynamic shell, mature small head and smaller eyes, strong neck, very long tapered foreflippers with rounded tips, short wide rear flippers; natural segmented shell with fine growth lines.\nRow 5 full mature sea turtle: robust broad elongated flattened carapace with darker rich scutes and etched natural growth rings, adult angular beaked head and small kind eyes, long strong tapered front flippers and mature neck scales. Different adult proportions from baby must be obvious at equal overall image height.\nEach four-frame row keeps its age and camera exactly, only tiny opposing front/rear flipper stroke and blink. Every flipper, head and shell edge must fit inside central 75% of each cell; at least 15% empty separation. Do not add land-tortoise feet, extra limbs, plants, shells on ground or accessories.",
+      "selectedAttempt": "initial-generation",
+      "layoutCorrectionPrompt": null,
+      "retainedAttempts": [
+        {
+          "source": "tmp/growth-drafts/turtle-growth-v2-draft1.png",
+          "tool": "image_gen.imagegen",
+          "prompt": "Use case: stylized-concept.\nAsset type: production growth animation sprite atlas for a companion app.\nCreate ONE portrait PNG, ideally 2048x2560 pixels, EXACTLY FOUR COLUMNS and FIVE ROWS = TWENTY full-body animal frames. Equal rectangular grid cells. No written numbers, text, labels, lines, borders or checkerboard. Genuine transparent alpha background. No floor or cast shadows.\nEvery row is a different age of the SAME animal. Within each row repeat that age for a consistent four-frame idle animation: column 1 relaxed eyes open, column 2 tiny inhale/motion, column 3 blink at motion peak, column 4 eyes reopened returning to initial pose. Tiny movement only. Fixed camera, viewing direction, soft studio key and cool rim lighting across all twenty frames. Animal silhouette remains entirely inside the central 75% of each cell, at least 15% empty transparent separation between adjacent animals, never clipped.\nPremium polished pre-rendered 3D animation-film animal, sophisticated appealing anatomy and tactile appropriate skin texture. Not primitive spheres, not flat illustration, not plastic. No clothing or crowns. The five age rows MUST change actual head-to-body ratio, appendage length, body silhouette, face anatomy and natural material structure. DO NOT merely scale one model or add accessories. Adult eyes are proportionally smaller; adults look anatomically grown and elegant, while retaining friendliness. Make top and bottom rows unmistakably different ages even if resized to same height.\nSubject: one green sea turtle swimming diagonally downward toward the viewer's right, fixed three-quarter view from slightly above, four swimming flippers splayed, olive and teal skin with natural fine scales and amber-brown scuted carapace, cream underside. Friendly calm eyes. No coral objects or environment.\nAge rows, mandatory distinct anatomy:\nRow 1 hatchling: short round compact shell with faint baby ridges, enormous round head and eyes relative to the shell, very short neck, stubby oval front flippers and tiny rear flippers, delicate fine skin.\nRow 2 juvenile: small oval domed shell, rounded face still large, slightly longer neck, short paddle-shaped flippers, clearer individual shell scutes.\nRow 3 adolescent: distinctly elongated flattened oval shell, head relatively smaller with a more defined beak, growing long front flippers and visible muscular shoulders, developed fine scale pattern.\nRow 4 adult: broad long low hydrodynamic shell, mature small head and smaller eyes, strong neck, very long tapered foreflippers with rounded tips, short wide rear flippers; natural segmented shell with fine growth lines.\nRow 5 full mature sea turtle: robust broad elongated flattened carapace with darker rich scutes and etched natural growth rings, adult angular beaked head and small kind eyes, long strong tapered front flippers and mature neck scales. Different adult proportions from baby must be obvious at equal overall image height.\nEach four-frame row keeps its age and camera exactly, only tiny opposing front/rear flipper stroke and blink. Every flipper, head and shell edge must fit inside central 75% of each cell; at least 15% empty separation. Do not add land-tortoise feet, extra limbs, plants, shells on ground or accessories.",
+          "selected": true,
+          "note": "20 independent silhouettes; chosen over layout revision."
+        },
+        {
+          "source": "tmp/growth-drafts/turtle-growth-v2-layout-attempt1.png",
+          "tool": "image_gen.imagegen",
+          "prompt": "Use case: precise-object-edit.\nEdit target: the provided existing growth animation sprite sheet of turtle.\nChange ONLY layout, scale within the grid and transparent gutters. Preserve its five clearly different age anatomies, exact species, colors, polished 3D style and four subtle animation poses per age.\nMandatory output layout: ONE portrait PNG with genuine transparent alpha, exactly 4 columns by 5 rows of equal SQUARE cells. Requested image size 2048 by 2560 pixels, so each invisible cell is 512 by 512 pixels. Absolute cell centers x=256,768,1280,1792 and y=256,768,1280,1792,2304. If output resolution differs, preserve this exact proportional equal grid.\nPut exactly ONE complete animal at each cell center, all 20 centered individually. Shrink each complete silhouette until it fits within a maximum 320 by 320 pixel box at 2048x2560 resolution (62.5% of the cell's width and height). Every cell MUST therefore have at least 18.75% completely empty transparent margin on all four sides. Adults must be scaled down to satisfy identical cell occupancy limits: their maturity is shown by anatomy, NOT by taking more cell space.\nDo not preserve the original compressed row spacing, or any overlap or touching between animals. Uniform top/bottom row spacing is CRITICAL. An empty invisible horizontal gutter approximately 180 pixels high must separate every row of silhouettes, including rows 4 and 5; equally generous vertical gutters separate columns.\nKeep every tail, flipper, arm and tentacle tip fully intact. Do not crop any frame. No visible grid, no labels, no borders, no text, no shadow, no floor, no extra particles, no colored background and no checkerboard. Preserve the image's five distinct growth forms and four-column timing. Layout correction only.",
+          "selected": false,
+          "note": "Rejected: stage 5 columns 3 and 4 touch at flipper tips; only 19 independent main silhouettes."
+        }
+      ],
+      "visualReview": {
+        "inspected": true,
+        "growth": "幼体大头大眼、短鳍、圆短壳；少年头壳比例下降、前鳍拉长；成体眼睛明显变小、长前鳍和宽长龟甲，盛年甲壳和鳞片更厚实。",
+        "animation": "第三列闭眼，前后鳍交替微动；四行成年帧与幼体不是同图缩放。",
+        "layout": "选用首稿：20个独立主体，无全图边界截断；盛年行横向留白紧、部分包围矩形互相覆盖，需连通轮廓提取。布局修订导致盛年第三/四帧鳍尖粘连（19个主体）而弃用。"
+      },
+      "technicalReview": {
+        "connectedMainSilhouettes": 20,
+        "alphaCorners": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mainSilhouetteTouchesWholeImageBoundary": false,
+        "requiresComponentPacking": true
+      }
+    },
+    {
+      "id": "octopus",
+      "name": "墨团章鱼",
+      "source": "Projects/assets/animation-source/octopus-growth-v2.png",
+      "sha256": "0E25D3110B8AF260B0F61A68984A7AEA818EF5D9B9402EF7541CFF2967E3B9B7",
+      "width": 1122,
+      "height": 1402,
+      "columns": 4,
+      "rows": 5,
+      "stages": [
+        "幼体",
+        "幼年",
+        "少年",
+        "成年",
+        "盛年"
+      ],
+      "frameCount": 20,
+      "framesPerStage": 4,
+      "tool": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept.\nAsset type: production growth animation sprite atlas for a companion app.\nCreate ONE portrait PNG, ideally 2048x2560 pixels, EXACTLY FOUR COLUMNS and FIVE ROWS = TWENTY full-body animal frames. Equal rectangular grid cells. No written numbers, text, labels, lines, borders or checkerboard. Genuine transparent alpha background. No floor or cast shadows.\nEvery row is a different age of the SAME animal. Within each row repeat that age for a consistent four-frame idle animation: column 1 relaxed eyes open, column 2 tiny inhale/motion, column 3 blink at motion peak, column 4 eyes reopened returning to initial pose. Tiny movement only. Fixed camera, viewing direction, soft studio key and cool rim lighting across all twenty frames. Animal silhouette remains entirely inside the central 75% of each cell, at least 15% empty transparent separation between adjacent animals, never clipped.\nPremium polished pre-rendered 3D animation-film animal, sophisticated appealing anatomy and tactile appropriate skin texture. Not primitive spheres, not flat illustration, not plastic. No clothing or crowns. The five age rows MUST change actual head-to-body ratio, appendage length, body silhouette, face anatomy and natural material structure. DO NOT merely scale one model or add accessories. Adult eyes are proportionally smaller; adults look anatomically grown and elegant, while retaining friendliness. Make top and bottom rows unmistakably different ages even if resized to same height.\nSubject: one soft lavender-violet octopus with pale mauve underside and paired suction cups, fixed frontal three-quarter pose resting its eight radiating arms in midair without a ground plane. One side arm tip curled upward. Friendly expressive violet eyes; fine pearlescent skin and understated natural speckles, no sparkles outside body.\nAge rows, mandatory distinct anatomy:\nRow 1 tiny hatchling: oversized near-spherical mantle dominating silhouette, huge round eyes, eight extremely short plump arms with small curled tips arranged like a tiny compact star.\nRow 2 young: rounded mantle still large, large eyes, eight short but lengthening arms, soft broad arm web and tiny suction cups.\nRow 3 adolescent: mantle becomes distinctly elongated oval and narrower at the neck, medium eyes, eight longer flexible arms extending wider than the mantle with more tapered ends, clearer arm web and suckers.\nRow 4 adult: elegant elongated teardrop mantle, smaller mature eyes, eight long muscular tapering arms with broad bases and pronounced double rows of suction cups, wide low radiating silhouette.\nRow 5 mature adult: largest robust elongated mantle with defined brow and small calm eyes, long powerful arms covering a wide span and curling at their tips, layered arm webbing and natural detailed skin mottling. Adult width relative to mantle must be much broader than in the round short-armed hatchling. The change must remain obvious at equal overall size; not just growing the same baby.\nIn each row all eight arms have clear unbroken anatomy; mild arm-tip curl changes and a blink only, exact same camera. Every complete arm tip fits inside central 75% of each equal cell with generous transparent gutters. No missing/extra limbs, no clothing, no props, no floor.",
+      "selectedAttempt": "layout-correction",
+      "layoutCorrectionPrompt": "Use case: precise-object-edit.\nEdit target: the provided existing growth animation sprite sheet of octopus.\nChange ONLY layout, scale within the grid and transparent gutters. Preserve its five clearly different age anatomies, exact species, colors, polished 3D style and four subtle animation poses per age.\nMandatory output layout: ONE portrait PNG with genuine transparent alpha, exactly 4 columns by 5 rows of equal SQUARE cells. Requested image size 2048 by 2560 pixels, so each invisible cell is 512 by 512 pixels. Absolute cell centers x=256,768,1280,1792 and y=256,768,1280,1792,2304. If output resolution differs, preserve this exact proportional equal grid.\nPut exactly ONE complete animal at each cell center, all 20 centered individually. Shrink each complete silhouette until it fits within a maximum 320 by 320 pixel box at 2048x2560 resolution (62.5% of the cell's width and height). Every cell MUST therefore have at least 18.75% completely empty transparent margin on all four sides. Adults must be scaled down to satisfy identical cell occupancy limits: their maturity is shown by anatomy, NOT by taking more cell space.\nDo not preserve the original compressed row spacing, or any overlap or touching between animals. Uniform top/bottom row spacing is CRITICAL. An empty invisible horizontal gutter approximately 180 pixels high must separate every row of silhouettes, including rows 4 and 5; equally generous vertical gutters separate columns.\nKeep every tail, flipper, arm and tentacle tip fully intact. Do not crop any frame. No visible grid, no labels, no borders, no text, no shadow, no floor, no extra particles, no colored background and no checkerboard. Preserve the image's five distinct growth forms and four-column timing. Layout correction only.",
+      "retainedAttempts": [
+        {
+          "source": "tmp/growth-drafts/octopus-growth-v2-draft1.png",
+          "tool": "image_gen.imagegen",
+          "prompt": "Use case: stylized-concept.\nAsset type: production growth animation sprite atlas for a companion app.\nCreate ONE portrait PNG, ideally 2048x2560 pixels, EXACTLY FOUR COLUMNS and FIVE ROWS = TWENTY full-body animal frames. Equal rectangular grid cells. No written numbers, text, labels, lines, borders or checkerboard. Genuine transparent alpha background. No floor or cast shadows.\nEvery row is a different age of the SAME animal. Within each row repeat that age for a consistent four-frame idle animation: column 1 relaxed eyes open, column 2 tiny inhale/motion, column 3 blink at motion peak, column 4 eyes reopened returning to initial pose. Tiny movement only. Fixed camera, viewing direction, soft studio key and cool rim lighting across all twenty frames. Animal silhouette remains entirely inside the central 75% of each cell, at least 15% empty transparent separation between adjacent animals, never clipped.\nPremium polished pre-rendered 3D animation-film animal, sophisticated appealing anatomy and tactile appropriate skin texture. Not primitive spheres, not flat illustration, not plastic. No clothing or crowns. The five age rows MUST change actual head-to-body ratio, appendage length, body silhouette, face anatomy and natural material structure. DO NOT merely scale one model or add accessories. Adult eyes are proportionally smaller; adults look anatomically grown and elegant, while retaining friendliness. Make top and bottom rows unmistakably different ages even if resized to same height.\nSubject: one soft lavender-violet octopus with pale mauve underside and paired suction cups, fixed frontal three-quarter pose resting its eight radiating arms in midair without a ground plane. One side arm tip curled upward. Friendly expressive violet eyes; fine pearlescent skin and understated natural speckles, no sparkles outside body.\nAge rows, mandatory distinct anatomy:\nRow 1 tiny hatchling: oversized near-spherical mantle dominating silhouette, huge round eyes, eight extremely short plump arms with small curled tips arranged like a tiny compact star.\nRow 2 young: rounded mantle still large, large eyes, eight short but lengthening arms, soft broad arm web and tiny suction cups.\nRow 3 adolescent: mantle becomes distinctly elongated oval and narrower at the neck, medium eyes, eight longer flexible arms extending wider than the mantle with more tapered ends, clearer arm web and suckers.\nRow 4 adult: elegant elongated teardrop mantle, smaller mature eyes, eight long muscular tapering arms with broad bases and pronounced double rows of suction cups, wide low radiating silhouette.\nRow 5 mature adult: largest robust elongated mantle with defined brow and small calm eyes, long powerful arms covering a wide span and curling at their tips, layered arm webbing and natural detailed skin mottling. Adult width relative to mantle must be much broader than in the round short-armed hatchling. The change must remain obvious at equal overall size; not just growing the same baby.\nIn each row all eight arms have clear unbroken anatomy; mild arm-tip curl changes and a blink only, exact same camera. Every complete arm tip fits inside central 75% of each equal cell with generous transparent gutters. No missing/extra limbs, no clothing, no props, no floor.",
+          "selected": false,
+          "note": "Initial image retained; selected version has revised spacing."
+        }
+      ],
+      "visualReview": {
+        "inspected": true,
+        "growth": "前两行圆大头和紧凑短腕；少年转为长梨形头部、较小眼和长腕；成体宽展肌肉腕、细长头部和较小眼，盛年腕部更粗长。后侧腕存在透视遮挡。",
+        "animation": "每行第三列闭眼，腕尖轻微卷曲，固定镜头。",
+        "layout": "20个独立完整主体，原图边缘未截断。成人腕尖接近相邻帧但在alpha>=64时未粘连；必须按独立轮廓提取，不能固定等分。"
+      },
+      "technicalReview": {
+        "connectedMainSilhouettes": 20,
+        "alphaCorners": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mainSilhouetteTouchesWholeImageBoundary": false,
+        "requiresComponentPacking": true
+      }
+    },
+    {
+      "id": "jellyfish",
+      "name": "星灯水母",
+      "source": "Projects/assets/animation-source/jellyfish-growth-v2.png",
+      "sha256": "1CE4CD92F2E8C67361F29B2C3BD28269F43A67866D9E56A3F1DCFB7C8EC08B0B",
+      "width": 1122,
+      "height": 1402,
+      "columns": 4,
+      "rows": 5,
+      "stages": [
+        "幼体",
+        "幼年",
+        "少年",
+        "成年",
+        "盛年"
+      ],
+      "frameCount": 20,
+      "framesPerStage": 4,
+      "tool": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept.\nAsset type: production growth animation sprite atlas for a companion app.\nCreate ONE portrait PNG, ideally 2048x2560 pixels, EXACTLY FOUR COLUMNS and FIVE ROWS = TWENTY full-body animal frames. Equal rectangular grid cells. No written numbers, text, labels, lines, borders or checkerboard. Genuine transparent alpha background. No floor or cast shadows.\nEvery row is a different age of the SAME animal. Within each row repeat that age for a consistent four-frame idle animation: column 1 relaxed eyes open, column 2 tiny inhale/motion, column 3 blink at motion peak, column 4 eyes reopened returning to initial pose. Tiny movement only. Fixed camera, viewing direction, soft studio key and cool rim lighting across all twenty frames. Animal silhouette remains entirely inside the central 75% of each cell, at least 15% empty transparent separation between adjacent animals, never clipped.\nPremium polished pre-rendered 3D animation-film animal, sophisticated appealing anatomy and tactile appropriate skin texture. Not primitive spheres, not flat illustration, not plastic. No clothing or crowns. The five age rows MUST change actual head-to-body ratio, appendage length, body silhouette, face anatomy and natural material structure. DO NOT merely scale one model or add accessories. Adult eyes are proportionally smaller; adults look anatomically grown and elegant, while retaining friendliness. Make top and bottom rows unmistakably different ages even if resized to same height.\nSubject: one elegant bioluminescent lilac-blue jellyfish, fixed upright floating front-three-quarter view, translucent pearlescent gel with gentle visible internal light and refractive folded oral arms. No face, no eyes, no mouth; for this naturally eyeless species replace the blink with a tiny bell contraction in column 3. The four-column animation is relaxed bell, gentle contraction, contraction peak, return to relaxed bell; no camera turn.\nAge rows, mandatory distinct anatomy while remaining the same fantasy moon-jelly species:\nRow 1 earliest juvenile ephyra-like form: tiny shallow star-lobed disc bell, eight short rounded lobes visible around perimeter, simple small internal four-petal structure, only very short delicate hanging filaments; wide low silhouette.\nRow 2 young medusa: small rounded dome bell and scalloped rim with lobes becoming continuous, a few short fine trailing tentacles, two tiny developing ruffled oral-arm folds; shallow overall silhouette.\nRow 3 adolescent: taller rounded umbrella bell with smooth connected scalloped rim, four medium-length soft ruffled oral arms and distinct longer thin peripheral tentacles; balanced bell-to-trail ratio.\nRow 4 adult: broad elegant hemispherical bell with visible radial canals and defined fine scalloped rim, four long layered ribbonlike oral arms, many flowing thin trailing tentacles, tall graceful complete silhouette.\nRow 5 mature: broad gently flattened parasol bell with rich translucent internal radial structures, flowing deep layered frilled oral arms and fine longer peripheral tentacles, sophisticated lilac and pearl-blue gel. Mature silhouette is tall and flowing with complex long appendages, unlike the shallow baby disc. No gold crown or accessory, the changes are actual bell anatomy and appendage proportions.\nKeep every trailing tip fully inside central 75% of its cell; all five row forms entirely visible without touching adjacent rows. Genuine transparent background and alpha around the body, no solid rectangles, no opaque white backdrop. No floating sparkle particles outside silhouette, no stars, no water, no scene.",
+      "selectedAttempt": "layout-correction",
+      "layoutCorrectionPrompt": "Use case: precise-object-edit.\nEdit target: the provided existing growth animation sprite sheet of jellyfish.\nChange ONLY layout, scale within the grid and transparent gutters. Preserve its five clearly different age anatomies, exact species, colors, polished 3D style and four subtle animation poses per age.\nMandatory output layout: ONE portrait PNG with genuine transparent alpha, exactly 4 columns by 5 rows of equal SQUARE cells. Requested image size 2048 by 2560 pixels, so each invisible cell is 512 by 512 pixels. Absolute cell centers x=256,768,1280,1792 and y=256,768,1280,1792,2304. If output resolution differs, preserve this exact proportional equal grid.\nPut exactly ONE complete animal at each cell center, all 20 centered individually. Shrink each complete silhouette until it fits within a maximum 320 by 320 pixel box at 2048x2560 resolution (62.5% of the cell's width and height). Every cell MUST therefore have at least 18.75% completely empty transparent margin on all four sides. Adults must be scaled down to satisfy identical cell occupancy limits: their maturity is shown by anatomy, NOT by taking more cell space.\nDo not preserve the original compressed row spacing, or any overlap or touching between animals. Uniform top/bottom row spacing is CRITICAL. An empty invisible horizontal gutter approximately 180 pixels high must separate every row of silhouettes, including rows 4 and 5; equally generous vertical gutters separate columns.\nKeep every tail, flipper, arm and tentacle tip fully intact. Do not crop any frame. No visible grid, no labels, no borders, no text, no shadow, no floor, no extra particles, no colored background and no checkerboard. Preserve the image's five distinct growth forms and four-column timing. Layout correction only.",
+      "retainedAttempts": [
+        {
+          "source": "tmp/growth-drafts/jellyfish-growth-v2-draft1.png",
+          "tool": "image_gen.imagegen",
+          "prompt": "Use case: stylized-concept.\nAsset type: production growth animation sprite atlas for a companion app.\nCreate ONE portrait PNG, ideally 2048x2560 pixels, EXACTLY FOUR COLUMNS and FIVE ROWS = TWENTY full-body animal frames. Equal rectangular grid cells. No written numbers, text, labels, lines, borders or checkerboard. Genuine transparent alpha background. No floor or cast shadows.\nEvery row is a different age of the SAME animal. Within each row repeat that age for a consistent four-frame idle animation: column 1 relaxed eyes open, column 2 tiny inhale/motion, column 3 blink at motion peak, column 4 eyes reopened returning to initial pose. Tiny movement only. Fixed camera, viewing direction, soft studio key and cool rim lighting across all twenty frames. Animal silhouette remains entirely inside the central 75% of each cell, at least 15% empty transparent separation between adjacent animals, never clipped.\nPremium polished pre-rendered 3D animation-film animal, sophisticated appealing anatomy and tactile appropriate skin texture. Not primitive spheres, not flat illustration, not plastic. No clothing or crowns. The five age rows MUST change actual head-to-body ratio, appendage length, body silhouette, face anatomy and natural material structure. DO NOT merely scale one model or add accessories. Adult eyes are proportionally smaller; adults look anatomically grown and elegant, while retaining friendliness. Make top and bottom rows unmistakably different ages even if resized to same height.\nSubject: one elegant bioluminescent lilac-blue jellyfish, fixed upright floating front-three-quarter view, translucent pearlescent gel with gentle visible internal light and refractive folded oral arms. No face, no eyes, no mouth; for this naturally eyeless species replace the blink with a tiny bell contraction in column 3. The four-column animation is relaxed bell, gentle contraction, contraction peak, return to relaxed bell; no camera turn.\nAge rows, mandatory distinct anatomy while remaining the same fantasy moon-jelly species:\nRow 1 earliest juvenile ephyra-like form: tiny shallow star-lobed disc bell, eight short rounded lobes visible around perimeter, simple small internal four-petal structure, only very short delicate hanging filaments; wide low silhouette.\nRow 2 young medusa: small rounded dome bell and scalloped rim with lobes becoming continuous, a few short fine trailing tentacles, two tiny developing ruffled oral-arm folds; shallow overall silhouette.\nRow 3 adolescent: taller rounded umbrella bell with smooth connected scalloped rim, four medium-length soft ruffled oral arms and distinct longer thin peripheral tentacles; balanced bell-to-trail ratio.\nRow 4 adult: broad elegant hemispherical bell with visible radial canals and defined fine scalloped rim, four long layered ribbonlike oral arms, many flowing thin trailing tentacles, tall graceful complete silhouette.\nRow 5 mature: broad gently flattened parasol bell with rich translucent internal radial structures, flowing deep layered frilled oral arms and fine longer peripheral tentacles, sophisticated lilac and pearl-blue gel. Mature silhouette is tall and flowing with complex long appendages, unlike the shallow baby disc. No gold crown or accessory, the changes are actual bell anatomy and appendage proportions.\nKeep every trailing tip fully inside central 75% of its cell; all five row forms entirely visible without touching adjacent rows. Genuine transparent background and alpha around the body, no solid rectangles, no opaque white backdrop. No floating sparkle particles outside silhouette, no stars, no water, no scene.",
+          "selected": false,
+          "note": "Initial image retained; selected version has revised spacing."
+        }
+      ],
+      "visualReview": {
+        "inspected": true,
+        "growth": "幼体浅盘八瓣状伞体与短须；幼年短圆伞；少年有中长褶皱口腕；成年高长须和宽伞，盛年扁宽伞及复杂长口腕。幼成剪影差异最明显。",
+        "animation": "自然无眼物种使用收伞脉冲代替眨眼，第三列伞体收缩，第四列回位。",
+        "layout": "20个独立主体，触须未被原图外边缘切断。原始五行高度不均、第四/五行间距较紧；alpha>=64时仍可分离。半透明边缘需打包后在浅深背景再查，不能直接五等分裁切。"
+      },
+      "technicalReview": {
+        "connectedMainSilhouettes": 20,
+        "alphaCorners": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "mainSilhouetteTouchesWholeImageBoundary": false,
+        "requiresComponentPacking": true
+      }
+    }
+  ]
+}

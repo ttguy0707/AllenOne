@@ -1,6 +1,6 @@
 # 界面与模型精修：Atelier 版
 
-> 最新界面：应用名为 AllenOne，用户要求 Google 系风格；以 `MATERIAL_UI.md` 为当前 UI 规范。本文 Atelier 配色与排版保留为历史，不再作为实现基线。
+> 最新界面：AllenOne 使用 macOS 风格，以 `MACOS_UI.md` 为当前规范。本文 Atelier 配色、模型材质及成长预览仅保留为历史，不再作为实现基线。
 
 > 动画方向变更：用户否定本轮模型效果并已选择预渲染立体动画，见 `ANIMATED_COMPANIONS.md`。下文模型细化是历史记录；浅深主题仍为当前界面基线。
 

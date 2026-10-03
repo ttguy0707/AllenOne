@@ -1,1 +1,18 @@
-{"name":"wildfit-pwa","private":true,"version":"0.1.0","type":"module","scripts":{"start":"node scripts/server.mjs","build":"node scripts/build.mjs","test":"node --test tests/core.test.mjs","check":"node tests/browser.mjs"},"dependencies":{"three":"0.180.0"},"devDependencies":{"playwright":"1.56.1"}}
+{
+  "name": "wildfit-pwa",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/server.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node tests/browser.mjs && node tests/recording-browser.mjs && node tests/recording-regressions.mjs && node tests/timers-browser.mjs && node tests/settlement-browser.mjs && node tests/animation-browser.mjs && node tests/macos-browser.mjs"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

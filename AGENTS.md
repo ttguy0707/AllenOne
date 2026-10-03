@@ -16,7 +16,9 @@
 
 10. 精灵展示已改为预渲染立体动画，修改前阅读 `Projects/ANIMATED_COMPANIONS.md`。不继续把旧实时程序模型作为交付方向，不恢复拖动旋转。
 
-11. 应用名为 AllenOne；当前 UI 使用 Google Material 风格，修改前阅读 `Projects/MATERIAL_UI.md`。品牌图标使用生图 PNG，采用标准大写 A、平面几何四色拼接，不用 SVG 重画；其他 UI 图标采用单色官方 Material Symbols，本地素材与规范见 `Projects/ICON_SYSTEM.md`。原 Atelier 仅为历史，不恢复旧装饰风格；更名不改数据库键或备份 Schema。
+11. 应用名为 AllenOne；用户最新要求精致 macOS 风格与交互／流畅度审查，修改前阅读 `Projects/MACOS_UI.md`；`Projects/MATERIAL_UI.md` 为前轮历史。品牌图标使用生图 PNG，采用标准大写 A、平面几何四色拼接，不用 SVG 重画；其他 UI 图标采用单色官方 Material Symbols，本地素材与规范见 `Projects/ICON_SYSTEM.md`。旧装饰风格不恢复；更名不改数据库键或既有备份字段。
+
+12. 运动记录简化见 `Projects/WORKOUT_FLOW.md`。用户要求补齐马／鳐、明显幼年成年差异、取消外观预览、未解锁图鉴置灰；用户已授权多 agent 交叉评审以及完成后更新原线上站点。不得把这些要求仅记为计划后搁置，最终状态见 PROJECT.md。
 
 ## 维护规则
 
@@ -29,4 +31,4 @@
 
 ## 当前工作边界
 
-用户已授权完成 20 多种差异姿态设计后开始开发 App。主应用开发版已在 `app/` 实现，本机与部署说明见根目录 `README.md`。面向 iPhone PWA，Windows 开发；已发布 Cloudflare Workers 并验证线上离线缓存，当前关联复制仓库与本地 origin 不同，后续更新前核对 `Projects/PROJECT.md`，尚未真机验收。具体物种名单、五阶段与成长数值为代理设计默认值，需与用户明确确认的周计分规则区分。
+用户已授权完成 20 多种差异姿态设计后开始开发 App。主应用开发版已在 `app/` 实现，本机与部署说明见根目录 `README.md`。面向 iPhone PWA，Windows 开发；已发布 Cloudflare Workers 并验证线上离线缓存，当前已统一关联 AllenOne/main，后续更新核对 `Projects/PROJECT.md`，尚未真机验收。具体物种名单、五阶段与成长数值为代理设计默认值，需与用户明确确认的周计分规则区分。

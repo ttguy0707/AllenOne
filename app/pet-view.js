@@ -20,11 +20,11 @@ export function mountPet(host,id,level=3){
  function setTheme(theme){host.dataset.theme=theme;draw();}
  function resize(){const rect=host.getBoundingClientRect();width=Math.max(1,rect.width);height=Math.max(1,rect.height);dpr=Math.min(window.devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);draw();}
  function pose(){
-  const mature=stage>=4,base=mature?8:0;
+  const growth=asset.rows===5,mature=stage>=4,base=growth?(stage-1)*4:mature?8:0;
   if(greeting>=0){
    const elapsed=time-greeting;
    if(elapsed>=1500){greeting=-1;host.dataset.motion=paused?'paused':'idle';}
-   else if(!mature){const sequence=[0,4,5,6,6,5,7,0];return sequence[Math.min(7,Math.floor(elapsed/187.5))];}
+   else if(!growth&&!mature){const sequence=[0,4,5,6,6,5,7,0];return sequence[Math.min(7,Math.floor(elapsed/187.5))];}
    else {const sequence=[0,1,1,2,3,3,1,0];return base+sequence[Math.min(7,Math.floor(elapsed/187.5))];}
   }
   // Hold the resting pose and play a short blink, instead of continuous flicker.
@@ -34,18 +34,17 @@ export function mountPet(host,id,level=3){
  function draw(){
   if(!loaded||disposed||!ctx)return;
   ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,width,height);
-  const frame=pose(),sw=atlas.naturalWidth/4,sh=atlas.naturalHeight/3;
-  const scale=[.70,.78,.86,.94,1][stage-1];
+  const frame=pose(),sw=atlas.naturalWidth/asset.columns,sh=atlas.naturalHeight/asset.rows;
+  const scale=asset.rows===5?[.82,.88,.93,.97,1][stage-1]:[.70,.78,.86,.94,1][stage-1];
   const size=Math.min(width*.94,height*.97)*scale;
   const progress=greeting<0?0:Math.min(1,(time-greeting)/1500);
   const lift=asset.floating?Math.sin(time/1100)*3:0;
   const greetingLift=progress?Math.sin(progress*Math.PI)*7:0;
   const x=(width-size)/2,y=height*.94-size-lift-greetingLift;
   const dark=host.dataset.theme==='dark';
-  if(stage>=4){const halo=ctx.createRadialGradient(width/2,height*.5,0,width/2,height*.5,size*.6);halo.addColorStop(0,dark?'#bca16520':'#bca16518');halo.addColorStop(1,'#bca16500');ctx.fillStyle=halo;ctx.fillRect(0,0,width,height);}
   ctx.save();ctx.translate(width/2,height*.91);ctx.scale(1,.14);const shadow=ctx.createRadialGradient(0,0,0,0,0,size*.30);shadow.addColorStop(0,dark?'#00000045':'#273b342c');shadow.addColorStop(1,'#273b3400');ctx.fillStyle=shadow;ctx.beginPath();ctx.arc(0,0,size*.30,0,Math.PI*2);ctx.fill();ctx.restore();
   ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
-  ctx.drawImage(atlas,(frame%4)*sw,Math.floor(frame/4)*sh,sw,sh,x,y,size,size);
+  ctx.drawImage(atlas,(frame%asset.columns)*sw,Math.floor(frame/asset.columns)*sh,sw,sh,x,y,size,size);
   host.dataset.frame=String(frame);
  }
  function tick(now){raf=0;if(disposed||paused||document.hidden||!loaded)return;const dt=last?Math.min(now-last,80):0;last=now;time+=dt;if(now-lastPaint>=1000/24){lastPaint=now;draw();}raf=requestAnimationFrame(tick);}

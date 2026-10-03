@@ -27,5 +27,5 @@ const rows=[
 ];
 export const CATALOG=rows.map(([id,name,glyph,family,pose,motto,color])=>({id,name,glyph,family,pose,motto,color}));
 export const petInfo=id=>CATALOG.find(p=>p.id===id);
-export const STAGES=['初生','萌芽','成长','觉醒','盛放'];
+export const STAGES=['初生','幼年','成长','成年','盛年'];
 export function stageOf(score,threshold){const s=BigInt(score),t=BigInt(threshold);return s>=t?5:s*100n>=t*70n?4:s*100n>=t*45n?3:s*100n>=t*20n?2:1;}

@@ -16,7 +16,7 @@
 | --- | --- |
 | settings | rest_seconds 默认休息秒数，time_zone 固定 Asia/Shanghai |
 | exercises | 动作定义：id、name、muscle、weight_basis、instruction、diagram、builtin |
-| workouts | 完成的运动；尚未完成录入存于 draft，不计入统计 |
+| workouts | 已保存的运动；与尚未完成的录入／编辑内容独立，只有此集合计入运动统计 |
 | templates | id、name、created_at（如有），exercises 为有序目标动作列表 |
 | meals | id、date、notes、created_at、updated_at；一条代表一顿 |
 | scoring_rules | version=weekly-v1、start_week、growth_version=growth-draft-v1 |
@@ -25,13 +25,24 @@
 | equipped | 当前已解锁精灵的 ID |
 | equipment_events | 历次装配变更的 pet_id 与 at 时间 |
 | total_score | 独立总分，十进制整数字符串 |
-| draft | null 或最近未完成录入表单；表单数值仍为字符串，不能作完成记录导入 |
+| recording_sessions | 可选的未完成录入／编辑表单数组，最多 104 条；旧备份可不含此字段 |
+| draft | 兼容旧版的 null 或单个未完成表单；恢复后仍可继续，下一次保存该表单时迁入 recording_sessions 并置 null |
+
+## 未完成录入 recording_sessions 与旧 draft
+
+此扩展沿用格式版本 `1.0.0`；本版能恢复不含 `recording_sessions` 的旧备份。完整 JSON 保留两个字段的现有内容，不将未完成表单转换为运动记录，也不保证旧版应用能够处理新增字段。
+
+每个表单包含 `id`、`sport`、`date`、`duration`、`distance`、`start`、`end`、`notes`、`started_at`、`ended_at`、`exercises` 和 `template_id`。日期、用时（分钟）、距离（公里）、篮球起止输入和备注均为字符串，允许尚未填写的空字符串；计时时刻为时间戳或 null。动作保留 `exercise_id`、名称、重量口径与有序 `sets`；每组的 `weight`（kg）和 `reps` 仍为输入字符串，另有稳定 `id` 和布尔 `completed`。这些是不完整表单，不能按 workouts 的数值字段直接累计。
+
+新运动的 `id` 为 null，以 `sport` 为唯一键；历史编辑使用原 workout 的 `id`，以该 ID 为唯一键，且原记录必须存在。对 `recording_sessions` 与非 null 的旧 `draft` 合并校验唯一键：同一种新运动最多一条，同一历史记录最多一条编辑内容，重复项会拒绝导入。不同运动和不同历史记录可以同时保留。动作引用、计时时刻与逐组字段仍须通过运行时校验。
+
+自动保存、完成或取消只更新对应唯一键，其他未完成内容保持不变；编辑历史时，在明确保存前不改动原 workouts。完成后写入 workouts 并移除对应未完成内容；取消编辑只丢弃编辑内容，保留原记录。删除历史记录时同时移除该记录的未完成编辑，避免留下失效引用。CSV 仅输出 workouts，不包含这些表单。
 
 ## 运动 workouts
 
 每条有稳定 id。sport 为 strength / running / cycling / basketball；date 为所属日；duration_seconds 为总时长（力量含休息）；duration_source 为 manual / timer / time_range。started_at、ended_at 可为 null，补记不虚构时刻。distance_meters 仅跑步与骑行有值；notes 篮球固定空字符串；template_id 可为空，模板删除不影响历史快照。created_at、updated_at 是记录维护时间。
 
-力量训练 exercises 是有序数组，每项有 exercise_id、name（当时名称快照）、weight_basis（当时口径）、sets（有序逐组数据）。每组有稳定 id、weight_kg、reps、completed。0 kg 是明确录入的自重／无外加重量，不表示缺失；未录入数据保留在 draft，保存完成记录时要求重量与次数有效。未完成组保留原始值但不计入完成组数与力量进步。
+力量训练 exercises 是有序数组，每项有 exercise_id、name（当时名称快照）、weight_basis（当时口径）、sets（有序逐组数据）。每组有稳定 id、weight_kg、reps、completed。0 kg 是明确录入的自重／无外加重量，不表示缺失；未完成录入保留在 recording_sessions（兼容旧 draft），保存运动记录时要求保留组的重量与次数有效。未完成组保留原始值但不计入完成组数与力量进步。
 
 重量口径明确记录为“杠铃总重”“单只哑铃”“器械标重”“自重”“辅助重量”或“外加负重”。不同口径不要直接相加。配速和均速由原始距离与时长派生，不单独作为权威数据。
 

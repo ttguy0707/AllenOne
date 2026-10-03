@@ -7,7 +7,7 @@
     const resolved=mode==='system'?(system.matches?'dark':'light'):mode;
     document.documentElement.dataset.theme=resolved;
     document.documentElement.style.colorScheme=resolved;
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content',resolved==='dark'?'#111318':'#f8fafd');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content',resolved==='dark'?'#17181b':'#f3f4f6');
     dispatchEvent(new CustomEvent('wildfit-theme',{detail:{mode,resolved}}));
   }
   window.WildfitTheme={get mode(){return mode;},get resolved(){return document.documentElement.dataset.theme;},set(value){
