@@ -68,6 +68,8 @@ Windows PowerShell 若限制执行 npm 脚本，可将 `npm` 写作 `npm.cmd`。
 
 参考：[Cloudflare Git 部署](https://developers.cloudflare.com/pages/get-started/git-integration/)、[iPhone 添加网站到主屏幕](https://support.apple.com/guide/iphone/iphea86e5236/ios)。
 
+本轮 0.3 已发布并完成线上离线检查。自动构建曾在初始化环境阶段超时（未进入代码编译），因此通过页面的 **New deployment → folder → dist/** 上传已验证的 93 个构建文件完成发布。此操作不改 Git 关联；若以后自动构建超时，可重试，或使用相同静态文件发布入口。不要上传源码根目录或 app/。
+
 ## 发布更新
 
 1. 修改源码并在本地构建、验证。

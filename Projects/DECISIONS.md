@@ -266,3 +266,9 @@
 - 已操作同一 Worker 的 Git 连接，从复制仓库 allen-one 改为 ttguy0707/AllenOne/main；保留原生产域名及复制仓库。
 - 构建 npm run build，部署显式指定 allen-one、dist/ 与兼容日期；新增 wrangler.jsonc 固化配置。
 - 不以连接成功或推送成功替代线上验收，发布结果记录于 PROJECT.md。
+
+## D030：完成 0.3 并验证线上
+
+- 2026-10-03：AllenOne 0.3 已发布至 https://allen-one.ttguy0707.workers.dev，代码提交 a8ea190，Dashboard 发布版本 962c5a4c。自动构建 9ca43991 在初始化环境阶段超时，未进入代码构建；因此直接上传已验收的 dist/（93 文件）完成发布。线上检查首页 200、91 项资源清单、24 套新图集、92 条缓存（wildfit-shell-c9c100e82ebf）、运行代码与本地构建一致；独立浏览器录入跑步后断网刷新，记录与马动画均正常，无脚本错误。Git 关联仍为 ttguy0707/AllenOne/main；已验证推送触发构建，但该次自动构建未完成。没有清除用户 IndexedDB，iPhone 真机仍待验收。
+- 多 agent 交互、视觉、数据与素材交叉评审完成；15 项核心／数据测试、7 组浏览器专项通过。
+- 暂存扫描未发现凭据、私人路径／邮箱、真实数据或图片隐私元数据；仅发布 app 构建，测试资料及原图未进入 dist。
